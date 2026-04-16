@@ -30,7 +30,7 @@
   "channels": {
     "discord": {
       "enabled": true,
-      "token": "${DISCORD_BOT_TOKEN}",
+      "token": "MTQ5NDMwMjExODY2Mjc3MDcwOA.GmcSsM.iF-czfNBQCA5vboSpAhqSVu_qB89I3nOdw_M5M",
       "dmPolicy": "pairing",
       "groupPolicy": "allowlist",
       "guilds": {
