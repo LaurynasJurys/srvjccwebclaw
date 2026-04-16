@@ -1,0 +1,18 @@
+{
+  "gateway": {
+    "auth": {
+      "mode": "token",
+      "token": "de3397c7ab0744ed809580281adb58ccce7f1d4b37769661"
+    },
+    "mode": "local"
+  },
+  "meta": {
+    "lastTouchedVersion": "2026.4.14",
+    "lastTouchedAt": "2026-04-16T17:42:20.879Z"
+  },
+  "agents": {
+    "defaults": {
+      "workspace": "/home/jccadmin/.openclaw/workspace"
+    }
+  }
+}
