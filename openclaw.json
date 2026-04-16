@@ -28,14 +28,6 @@
     }
   },
   "channels": {
-    "discord": {
-      "enabled": true,
-      "token": "MTQ5NDMwMjExODY2Mjc3MDcwOA.GmcSsM.iF-czfNBQCA5vboSpAhqSVu_qB89I3nOdw_M5M",
-      "dmPolicy": "pairing",
-      "groupPolicy": "allowlist",
-      "guilds": {
-        "1485021229638226125": {}
-      }
     }
   },
   "tools": {},
