@@ -1,26 +1,12 @@
 
 {
   "gateway": {
-    "mode": "local",
-    "auth": {
-      "mode": "token",
-      "token": "9d99b55ce9505c6958234eaf40bf0e98d0d03d74a211ca0d"
-    },
-    "controlUi": {
-      "allowedOrigins": [
-        "http://localhost:18789",
-        "http://127.0.0.1:18789",
-        "https://agent.jurys.local"
-      ]
-    }
+    "mode": "local"
   },
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.4",
-        "fallbacks": [
-          "ollama/gemma4:e4b"
-        ]
+        "primary": "openai-codex/gpt-5.4"
       },
       "memorySearch": {
         "enabled": false
@@ -30,19 +16,6 @@
   "models": {
     "mode": "merge",
     "providers": {
-      "ollama": {
-        "baseUrl": "http://host.docker.internal:11434/v1",
-        "api": "openai-completions",
-        "apiKey": "ollama",
-        "models": [
-          {
-            "id": "gemma4:e4b",
-            "name": "Gemma 4 E4B",
-            "contextWindow": 32768,
-            "maxTokens": 4096
-          }
-        ]
-      },
       "openai-codex": {
         "baseUrl": "https://api.openai.com/v1",
         "models": [
@@ -72,9 +45,6 @@
   },
   "plugins": {
     "entries": {
-      "ollama": {
-        "enabled": true
-      },
       "openai": {
         "enabled": true
       }
