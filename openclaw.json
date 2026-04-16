@@ -4,15 +4,70 @@
       "mode": "token",
       "token": "de3397c7ab0744ed809580281adb58ccce7f1d4b37769661"
     },
-    "mode": "local"
-  },
-  "meta": {
-    "lastTouchedVersion": "2026.4.14",
-    "lastTouchedAt": "2026-04-16T17:42:20.879Z"
-  },
   "agents": {
     "defaults": {
-      "workspace": "/home/jccadmin/.openclaw/workspace"
+      "model": {
+        "primary": "openai-codex/gpt-5.4",
+        "fallbacks": [
+          "ollama/gemma4:e4b"
+        ]
+      },
+      "memorySearch": {
+        "enabled": false
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "ollama": {
+        "baseUrl": "http://host.docker.internal:11434/v1",
+        "api": "openai-completions",
+        "apiKey": "ollama",
+        "models": [
+          {
+            "id": "gemma4:e4b",
+            "name": "Gemma 4 E4B",
+            "contextWindow": 32768,
+            "maxTokens": 4096
+          }
+        ]
+      },
+      "openai-codex": {
+        "baseUrl": "https://api.openai.com/v1",
+        "models": [
+          {
+            "id": "gpt-5.4",
+            "name": "GPT-5.4"
+          }
+        ]
+      }
+    }
+  },
+  "channels": {
+    "discord": {
+      "enabled": true,
+      "token": "${DISCORD_BOT_TOKEN}",
+      "dmPolicy": "pairing",
+      "groupPolicy": "allowlist",
+      "guilds": {
+        "1485021229638226125": {}
+      }
+    }
+  },
+  "tools": {},
+  "meta": {
+    "lastTouchedVersion": "2026.4.14",
+    "lastTouchedAt": "2026-04-15T18:28:25.003Z"
+  },
+  "plugins": {
+    "entries": {
+      "ollama": {
+        "enabled": true
+      },
+      "openai": {
+        "enabled": true
+      }
     }
   }
 }
