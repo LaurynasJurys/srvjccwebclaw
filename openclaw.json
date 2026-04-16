@@ -1,9 +1,19 @@
+
 {
   "gateway": {
+    "mode": "local",
     "auth": {
       "mode": "token",
-      "token": "de3397c7ab0744ed809580281adb58ccce7f1d4b37769661"
+      "token": "9d99b55ce9505c6958234eaf40bf0e98d0d03d74a211ca0d"
     },
+    "controlUi": {
+      "allowedOrigins": [
+        "http://localhost:18789",
+        "http://127.0.0.1:18789",
+        "https://agent.jurys.local"
+      ]
+    }
+  },
   "agents": {
     "defaults": {
       "model": {
