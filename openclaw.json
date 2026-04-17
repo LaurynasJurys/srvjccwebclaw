@@ -44,13 +44,25 @@
   "tools": {},
   "meta": {
     "lastTouchedVersion": "2026.4.14",
-    "lastTouchedAt": "2026-04-16T20:49:27.349Z"
+    "lastTouchedAt": "2026-04-17T08:14:58.224Z"
   },
   "plugins": {
     "entries": {
       "openai": {
         "enabled": true
+      },
+      "whatsapp": {
+        "enabled": true
       }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "+37067026355"
+      ],
+      "enabled": true
     }
   },
   "wizard": {
