@@ -3,10 +3,10 @@
 _Learn about the person you're helping. Update this as you go._
 
 - **Name:** Laurynas
-- **What to call them:** Lauris
+- **What to call them:** Laurynas
 - **Pronouns:** _(optional)_
-- **Timezone:** gmt+3
-- **Notes:**
+- **Timezone:** UTC
+- **Notes:** Prefers clear correction over agreement when he is mistaken.
 
 ## Context
 

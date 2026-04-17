@@ -3,3 +3,7 @@
 !openclaw.json
 !workspace/
 !workspace/**
+!scripts/
+!scripts/**
+!systemd-user/
+!systemd-user/**

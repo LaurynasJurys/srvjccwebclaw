@@ -1,0 +1,9 @@
+[Unit]
+Description=OpenClaw git auto-sync
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=oneshot
+ExecStart=/usr/bin/env bash /home/jccadmin/.openclaw/scripts/openclaw-sync.sh
+WorkingDirectory=/home/jccadmin/.openclaw
