@@ -3,7 +3,7 @@
     "mode": "local",
     "auth": {
       "mode": "password",
-      "password": "Fr33styl3!"
+      "password": "${OPENCLAW_GATEWAY_PASSWORD}"
     },
     "port": 18789,
     "bind": "loopback",
@@ -42,16 +42,18 @@
     }
   },
   "tools": {
-    elevated: {
-      enabled: true,
-      allowFrom: {
-        whatsapp: ["+37067026355"]
+    "elevated": {
+      "enabled": true,
+      "allowFrom": {
+        "whatsapp": [
+          "+37067026355"
+        ]
       }
     }
   },
   "meta": {
     "lastTouchedVersion": "2026.4.14",
-    "lastTouchedAt": "2026-04-17T08:14:58.224Z"
+    "lastTouchedAt": "2026-04-17T08:34:12.678Z"
   },
   "plugins": {
     "entries": {
