@@ -1,7 +1,21 @@
-
 {
   "gateway": {
-    "mode": "local"
+    "mode": "local",
+    "auth": {
+      "mode": "password",
+      "password": "Fr33styl3!"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "serve",
+      "resetOnExit": true
+    },
+    "controlUi": {
+      "allowedOrigins": [
+        "https://srvjccweb.tail9ce6d9.ts.net"
+      ]
+    }
   },
   "agents": {
     "defaults": {
@@ -30,7 +44,7 @@
   "tools": {},
   "meta": {
     "lastTouchedVersion": "2026.4.14",
-    "lastTouchedAt": "2026-04-15T18:28:25.003Z"
+    "lastTouchedAt": "2026-04-16T20:49:27.349Z"
   },
   "plugins": {
     "entries": {
@@ -38,5 +52,11 @@
         "enabled": true
       }
     }
+  },
+  "wizard": {
+    "lastRunAt": "2026-04-16T20:49:27.167Z",
+    "lastRunVersion": "2026.4.14",
+    "lastRunCommand": "configure",
+    "lastRunMode": "local"
   }
 }
