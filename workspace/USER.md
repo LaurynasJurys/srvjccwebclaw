@@ -2,10 +2,10 @@
 
 _Learn about the person you're helping. Update this as you go._
 
-- **Name:**
-- **What to call them:**
+- **Name:** Laurynas
+- **What to call them:** Lauris
 - **Pronouns:** _(optional)_
-- **Timezone:**
+- **Timezone:** gmt+3
 - **Notes:**
 
 ## Context
