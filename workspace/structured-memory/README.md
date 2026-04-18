@@ -7,6 +7,9 @@ This directory contains the first real implementation of typed layer 3 and layer
 - `init_sqlite_memory.py` - creates schema
 - `seed_sqlite_memory.py` - seeds initial known entities, decisions, procedures, reflections, and facts
 - `query_memory.py` - quick query helper
+- `ingest_candidates.py` - writes candidate fact claims, reflections, and procedures with evidence refs
+- `nightly_candidates.json` - example candidate payload for ingestion
+- `run_nightly_ingest.sh` - simple wrapper for nightly candidate ingestion
 
 ## Record families
 - `entities`
@@ -35,3 +38,10 @@ python3 structured-memory/seed_sqlite_memory.py
 ```bash
 python3 structured-memory/query_memory.py "SELECT id, name, type FROM entities ORDER BY id"
 ```
+
+## Candidate ingestion
+```bash
+python3 structured-memory/ingest_candidates.py structured-memory/nightly_candidates.json
+```
+
+This inserts candidate records into SQLite and attaches evidence references in `evidence_refs`.
