@@ -55,8 +55,8 @@
     }
   },
   "meta": {
-    "lastTouchedVersion": "2026.4.14",
-    "lastTouchedAt": "2026-04-17T08:44:52.892Z"
+    "lastTouchedVersion": "2026.4.15",
+    "lastTouchedAt": "2026-04-18T07:23:57.949Z"
   },
   "plugins": {
     "entries": {
@@ -65,6 +65,74 @@
       },
       "whatsapp": {
         "enabled": true
+      },
+      "memory-core": {
+        "config": {
+          "dreaming": {
+            "enabled": true,
+            "frequency": "0 3 * * *",
+            "timezone": "Europe/Vilnius",
+            "verboseLogging": false,
+            "storage": {
+              "mode": "both",
+              "separateReports": true
+            },
+            "phases": {
+              "light": {
+                "enabled": true,
+                "lookbackDays": 7,
+                "limit": 50,
+                "dedupeSimilarity": 0.92
+              },
+              "rem": {
+                "enabled": true,
+                "lookbackDays": 30,
+                "limit": 30,
+                "minPatternStrength": 0.55
+              },
+              "deep": {
+                "enabled": true,
+                "limit": 24,
+                "minScore": 0.45,
+                "minRecallCount": 2,
+                "minUniqueQueries": 2,
+                "recencyHalfLifeDays": 30,
+                "maxAgeDays": 365
+              }
+            }
+          }
+        },
+        "enabled": true
+      },
+      "memory-wiki": {
+        "enabled": true,
+        "config": {
+          "vaultMode": "bridge",
+          "vault": {
+            "path": "/home/jccadmin/.openclaw/workspace/wiki-vault",
+            "renderMode": "obsidian"
+          },
+          "bridge": {
+            "enabled": true,
+            "readMemoryArtifacts": true,
+            "indexDreamReports": true,
+            "indexDailyNotes": true,
+            "indexMemoryRoot": true,
+            "followMemoryEvents": true
+          },
+          "ingest": {
+            "autoCompile": true,
+            "maxConcurrentJobs": 1,
+            "allowUrlIngest": false
+          },
+          "search": {
+            "backend": "shared",
+            "corpus": "all"
+          },
+          "context": {
+            "includeCompiledDigestPrompt": true
+          }
+        }
       }
     }
   },
