@@ -1,0 +1,85 @@
+{
+  "fact_claims": [
+    {
+      "id": "fact.nightly-maintenance-scheduled",
+      "claim": "Nightly memory and wiki maintenance is scheduled for 03:00 Europe/Vilnius.",
+      "domain": "memory-operations",
+      "subject_refs": ["system.openclaw"],
+      "confidence": 0.95,
+      "validation_state": "verified",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-18.md",
+          "source_locator": "L1-L7",
+          "note": "Daily durable note covering nightly maintenance enablement.",
+          "weight": 0.9
+        }
+      ]
+    }
+  ],
+  "reflections": [
+    {
+      "id": "reflection.docs-to-sqlite-pipeline-needed",
+      "observation": "The memory system now has docs, wiki pages, and a SQLite store, but candidate ingestion was the missing step.",
+      "pattern": "Architecture and documentation were implemented first, then the typed store, then ingestion glue.",
+      "recommended_action": "Use nightly maintenance to generate candidate fact claims and reflections into SQLite with evidence refs before publishing durable summaries.",
+      "related_refs": [
+        "architecture/sqlite-memory-store",
+        "runbooks/sqlite-memory-operations",
+        "architecture/structured-memory-schema"
+      ],
+      "confidence": 0.88,
+      "promotion_state": "promoted",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "wiki-page",
+          "source_path": "architecture/sqlite-memory-store",
+          "note": "SQLite store documented after implementation.",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "id": "procedure.ingest-candidates-into-sqlite",
+      "name": "Ingest candidate memory records into SQLite",
+      "purpose": "Load candidate fact claims, reflections, and procedures into the structured memory store with evidence refs.",
+      "preconditions": [
+        "structured-memory/memory.db exists",
+        "candidate JSON payload exists"
+      ],
+      "steps": [
+        "Prepare a JSON payload with fact_claims, reflections, and procedures arrays.",
+        "Run python3 structured-memory/ingest_candidates.py <payload.json>.",
+        "Review inserted rows and evidence refs.",
+        "Promote only validated records into human-facing summaries."
+      ],
+      "expected_outcomes": [
+        "Candidate records are stored in SQLite.",
+        "Evidence refs point back to notes or wiki pages."
+      ],
+      "rollback": [
+        "Delete inserted rows by id if the candidate payload was wrong."
+      ],
+      "safety_notes": [
+        "Do not use candidate ingestion to silently canonize risky security or access-control claims.",
+        "Keep source evidence attached."
+      ],
+      "confidence": 0.92,
+      "approval_state": "approved",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "structured-memory/ingest_candidates.py",
+          "note": "Implementation of the candidate-ingestion helper.",
+          "weight": 0.95
+        }
+      ]
+    }
+  ]
+}
