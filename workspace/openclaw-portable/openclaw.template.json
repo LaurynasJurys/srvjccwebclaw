@@ -1,0 +1,144 @@
+{
+  "gateway": {
+    "mode": "local",
+    "auth": {
+      "mode": "password",
+      "password": "${OPENCLAW_GATEWAY_PASSWORD}"
+    },
+    "port": 18789,
+    "bind": "loopback",
+    "tailscale": {
+      "mode": "serve",
+      "resetOnExit": true
+    },
+    "controlUi": {
+      "allowedOrigins": [
+        "${OPENCLAW_ALLOWED_ORIGIN}"
+      ]
+    }
+  },
+  "agents": {
+    "defaults": {
+      "model": {
+        "primary": "openai-codex/gpt-5.4"
+      },
+      "memorySearch": {
+        "enabled": true
+      },
+      "heartbeat": {
+        "every": "0m"
+      }
+    }
+  },
+  "models": {
+    "mode": "merge",
+    "providers": {
+      "openai-codex": {
+        "baseUrl": "https://api.openai.com/v1",
+        "models": [
+          {
+            "id": "gpt-5.4",
+            "name": "GPT-5.4"
+          }
+        ]
+      }
+    }
+  },
+  "tools": {
+    "elevated": {
+      "enabled": true,
+      "allowFrom": {
+        "whatsapp": [
+          "+37067026355"
+        ]
+      }
+    }
+  },
+  "plugins": {
+    "entries": {
+      "openai": {
+        "enabled": true
+      },
+      "whatsapp": {
+        "enabled": true
+      },
+      "memory-core": {
+        "enabled": true,
+        "config": {
+          "dreaming": {
+            "enabled": true,
+            "frequency": "0 3 * * *",
+            "timezone": "Europe/Vilnius",
+            "verboseLogging": false,
+            "storage": {
+              "mode": "both",
+              "separateReports": true
+            },
+            "phases": {
+              "light": {
+                "enabled": true,
+                "lookbackDays": 7,
+                "limit": 50,
+                "dedupeSimilarity": 0.92
+              },
+              "rem": {
+                "enabled": true,
+                "lookbackDays": 30,
+                "limit": 30,
+                "minPatternStrength": 0.55
+              },
+              "deep": {
+                "enabled": true,
+                "limit": 24,
+                "minScore": 0.45,
+                "minRecallCount": 2,
+                "minUniqueQueries": 2,
+                "recencyHalfLifeDays": 30,
+                "maxAgeDays": 365
+              }
+            }
+          }
+        }
+      },
+      "memory-wiki": {
+        "enabled": true,
+        "config": {
+          "vaultMode": "bridge",
+          "vault": {
+            "path": "/home/jccadmin/.openclaw/workspace/wiki-vault",
+            "renderMode": "obsidian"
+          },
+          "bridge": {
+            "enabled": true,
+            "readMemoryArtifacts": true,
+            "indexDreamReports": true,
+            "indexDailyNotes": true,
+            "indexMemoryRoot": true,
+            "followMemoryEvents": true
+          },
+          "ingest": {
+            "autoCompile": true,
+            "maxConcurrentJobs": 1,
+            "allowUrlIngest": false
+          },
+          "search": {
+            "backend": "shared",
+            "corpus": "all"
+          },
+          "context": {
+            "includeCompiledDigestPrompt": true
+          }
+        }
+      }
+    }
+  },
+  "channels": {
+    "whatsapp": {
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "+37067026355"
+      ],
+      "enabled": true
+    }
+  }
+}
