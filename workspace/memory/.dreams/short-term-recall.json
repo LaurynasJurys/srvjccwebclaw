@@ -1,0 +1,161 @@
+{
+  "version": 1,
+  "updatedAt": "2026-04-18T12:23:12.299Z",
+  "entries": {
+    "memory:memory/2026-04-17.md:1:22": {
+      "key": "memory:memory/2026-04-17.md:1:22",
+      "path": "memory/2026-04-17.md",
+      "startLine": 1,
+      "endLine": 22,
+      "source": "memory",
+      "snippet": "# 2026-04-17 - Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup deferred for later. # 2026-04-17 - Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup defe",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8117409110164073,
+      "maxScore": 0.8117409110164073,
+      "firstRecalledAt": "2026-04-18T12:23:12.299Z",
+      "lastRecalledAt": "2026-04-18T12:23:12.299Z",
+      "queryHashes": [
+        "5399429133d3"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "gateway",
+        "long-term",
+        "memory.md",
+        "openclaw-gateway-password",
+        "created",
+        "initial",
+        "term",
+        "disabled"
+      ]
+    },
+    "memory:memory/2026-04-17.md:35:47": {
+      "key": "memory:memory/2026-04-17.md:35:47",
+      "path": "memory/2026-04-17.md",
+      "startLine": 35,
+      "endLine": 47,
+      "source": "memory",
+      "snippet": "- Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup deferred for later. - Hardened SSH by confirming `PasswordAuthentication no` and changing `PermitRootLogin` to `no`. - Bootstrapped k3s + Argo CD on the host, fixed Argo repo credential/bootstrap issues, and verified ingress/TLS for staging, Keycloak, and Wiki.js. - Chose manual-first Keycloak bootstrap going forward and removed bootstrap admin credentials from both repo ma",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.8115519210353214,
+      "maxScore": 0.8115519210353214,
+      "firstRecalledAt": "2026-04-18T12:23:12.299Z",
+      "lastRecalledAt": "2026-04-18T12:23:12.299Z",
+      "queryHashes": [
+        "5399429133d3"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "gateway",
+        "long-term",
+        "memory.md",
+        "openclaw-gateway-password",
+        "credential/bootstrap",
+        "ingress/tls",
+        "wiki.js",
+        "manual-first"
+      ]
+    },
+    "memory:memory/2026-04-17.md:20:40": {
+      "key": "memory:memory/2026-04-17.md:20:40",
+      "path": "memory/2026-04-17.md",
+      "startLine": 20,
+      "endLine": 40,
+      "source": "memory",
+      "snippet": "- Set up SOPS + age for GitOps secrets, including Argo-side decryption support, and moved Keycloak/Wiki.js Kubernetes secrets to encrypted GitOps-managed config. - Deployed Vault on the host outside k3s, bound privately on loopback + Tailscale only, initialized/unsealed it, and enabled KV v2. - Established Vault AppRole-based automation access and granted scoped read access to the Keycloak secret path. - Created Keycloak realm `jcc` and configured a `WikiApp` OIDC client; realm hardening enabled email verification, reset password, brute-force protection, disabled registration, and disabled direct access grants for the Wiki client. - Began replacing staging.jurys.lt Traefik basic-auth with Ke",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.811516917227645,
+      "maxScore": 0.811516917227645,
+      "firstRecalledAt": "2026-04-18T12:23:12.299Z",
+      "lastRecalledAt": "2026-04-18T12:23:12.299Z",
+      "queryHashes": [
+        "5399429133d3"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "argo-side",
+        "keycloak/wiki.js",
+        "gitops-managed",
+        "initialized/unsealed",
+        "approle-based",
+        "brute-force",
+        "staging.jurys.lt",
+        "basic-auth"
+      ]
+    },
+    "memory:memory/2026-04-17.md:51:58": {
+      "key": "memory:memory/2026-04-17.md:51:58",
+      "path": "memory/2026-04-17.md",
+      "startLine": 51,
+      "endLine": 58,
+      "source": "memory",
+      "snippet": "- Pushed repo fixes for staging auth under commits `8fbff8d`, `5b56831`, `6b4cc25`, `f4948fa`, and `74dd0a4`. - Wiki.js local admin credentials in Vault path `secret/Wiki.local` were corrected and used successfully to create initial infra/runbook pages in Wiki.js. - Created Wiki.js pages: `infra/openclaw`, `infra/k3s-argocd`, `infra/vault`, `infra/keycloak`, `infra/wikijs`, and `runbooks/staging-auth`. - Wiki.js native Keycloak auth strategy initially failed with UI error `Invalid authentication provider`; root cause was that the strategy row existed but persisted config fields were all null, causing startup error `host is required`. - Keycloak provider config was repaired directly in Wiki.",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6320019338165207,
+      "maxScore": 0.6320019338165207,
+      "firstRecalledAt": "2026-04-18T12:23:12.299Z",
+      "lastRecalledAt": "2026-04-18T12:23:12.299Z",
+      "queryHashes": [
+        "5399429133d3"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "wiki.js",
+        "secret/wiki.local",
+        "infra/runbook",
+        "infra/openclaw",
+        "infra/k3s-argocd",
+        "infra/vault",
+        "infra/keycloak",
+        "infra/wikijs"
+      ]
+    },
+    "memory:memory/2026-04-17.md:46:54": {
+      "key": "memory:memory/2026-04-17.md:46:54",
+      "path": "memory/2026-04-17.md",
+      "startLine": 46,
+      "endLine": 54,
+      "source": "memory",
+      "snippet": "- Established Vault AppRole-based automation access and granted scoped read access to the Keycloak secret path. - Created Keycloak realm `jcc` and configured a `WikiApp` OIDC client; realm hardening enabled email verification, reset password, brute-force protection, disabled registration, and disabled direct access grants for the Wiki client. - Began replacing staging.jurys.lt Traefik basic-auth with Keycloak-backed oauth2-proxy via GitOps; repo commit `d57fef9` exists but rollout was not yet fully completed or verified because the Keycloak client secret needed one cleanup/fix. - Finished staging Keycloak auth rollout: `juryslt-stage` reached `Synced|Healthy|Succeeded`, `juryslt-oauth2-proxy",
+      "recallCount": 1,
+      "dailyCount": 0,
+      "groundedCount": 0,
+      "totalScore": 0.6314003124188711,
+      "maxScore": 0.6314003124188711,
+      "firstRecalledAt": "2026-04-18T12:23:12.299Z",
+      "lastRecalledAt": "2026-04-18T12:23:12.299Z",
+      "queryHashes": [
+        "5399429133d3"
+      ],
+      "recallDays": [
+        "2026-04-18"
+      ],
+      "conceptTags": [
+        "approle-based",
+        "brute-force",
+        "staging.jurys.lt",
+        "basic-auth",
+        "keycloak-backed",
+        "oauth2-proxy",
+        "cleanup/fix",
+        "juryslt-stage"
+      ]
+    }
+  }
+}
