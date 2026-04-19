@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-18T22:20:05.845Z",
+  "updatedAt": "2026-04-19T19:39:32.915Z",
   "entries": {
     "memory:memory/2026-04-17.md:1:22": {
       "key": "memory:memory/2026-04-17.md:1:22",
@@ -9,20 +9,21 @@
       "endLine": 22,
       "source": "memory",
       "snippet": "# 2026-04-17 - Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup deferred for later. # 2026-04-17 - Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup defe",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.870445420661306,
+      "totalScore": 5.682186329005508,
       "maxScore": 0.8117409110164073,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-04-18T22:20:05.845Z",
+      "lastRecalledAt": "2026-04-19T19:39:32.915Z",
       "queryHashes": [
         "5399429133d3",
         "4690d25a1281",
         "ee7c28dfa3c9",
         "5e69bcde97d3",
         "5aa1b3023d59",
-        "128925e60108"
+        "128925e60108",
+        "211f3486198b"
       ],
       "recallDays": [
         "2026-04-18",
@@ -46,20 +47,21 @@
       "endLine": 47,
       "source": "memory",
       "snippet": "- Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup deferred for later. - Hardened SSH by confirming `PasswordAuthentication no` and changing `PermitRootLogin` to `no`. - Bootstrapped k3s + Argo CD on the host, fixed Argo repo credential/bootstrap issues, and verified ingress/TLS for staging, Keycloak, and Wiki.js. - Chose manual-first Keycloak bootstrap going forward and removed bootstrap admin credentials from both repo ma",
-      "recallCount": 6,
+      "recallCount": 7,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.869311465598537,
+      "totalScore": 5.680863383062021,
       "maxScore": 0.8115519210353214,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-04-18T22:20:05.845Z",
+      "lastRecalledAt": "2026-04-19T19:39:32.915Z",
       "queryHashes": [
         "5399429133d3",
         "4690d25a1281",
         "ee7c28dfa3c9",
         "5e69bcde97d3",
         "5aa1b3023d59",
-        "128925e60108"
+        "128925e60108",
+        "211f3486198b"
       ],
       "recallDays": [
         "2026-04-18",
@@ -120,16 +122,17 @@
       "endLine": 58,
       "source": "memory",
       "snippet": "- Pushed repo fixes for staging auth under commits `8fbff8d`, `5b56831`, `6b4cc25`, `f4948fa`, and `74dd0a4`. - Wiki.js local admin credentials in Vault path `secret/Wiki.local` were corrected and used successfully to create initial infra/runbook pages in Wiki.js. - Created Wiki.js pages: `infra/openclaw`, `infra/k3s-argocd`, `infra/vault`, `infra/keycloak`, `infra/wikijs`, and `runbooks/staging-auth`. - Wiki.js native Keycloak auth strategy initially failed with UI error `Invalid authentication provider`; root cause was that the strategy row existed but persisted config fields were all null, causing startup error `host is required`. - Keycloak provider config was repaired directly in Wiki.",
-      "recallCount": 2,
+      "recallCount": 3,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 1.2640038618356297,
-      "maxScore": 0.6320019338165207,
+      "totalScore": 2.2640038618356297,
+      "maxScore": 1,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-04-18T22:20:05.845Z",
+      "lastRecalledAt": "2026-04-19T19:39:32.915Z",
       "queryHashes": [
         "5399429133d3",
-        "128925e60108"
+        "128925e60108",
+        "211f3486198b"
       ],
       "recallDays": [
         "2026-04-18",
@@ -186,19 +189,20 @@
       "endLine": 7,
       "source": "memory",
       "snippet": "- Implemented an OpenClaw portability bundle in `workspace/openclaw-portable/` with `openclaw.template.json`, `openclaw.env.example`, `bootstrap-openclaw.sh`, and `README.md` to make redeploy on another host more reproducible. - Enabled OpenClaw `memory-core` dreaming nightly at 03:00 Europe/Vilnius with light, REM, and deep phases. - Enabled `memory-wiki` in bridge mode with auto compile, daily note indexing, memory root indexing, dream report indexing, and shared search across corpus `all`. - Added nightly 03:00 Europe/Vilnius memory/wiki maintenance to lint and reconcile memory and wiki. - Clarified to Laurynas that memory layer 3 is currently implemented as hybrid durable operational me",
-      "recallCount": 5,
+      "recallCount": 6,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5,
+      "totalScore": 6,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-18T12:25:12.237Z",
-      "lastRecalledAt": "2026-04-18T22:20:05.845Z",
+      "lastRecalledAt": "2026-04-19T19:39:32.915Z",
       "queryHashes": [
         "4690d25a1281",
         "ee7c28dfa3c9",
         "5e69bcde97d3",
         "5aa1b3023d59",
-        "128925e60108"
+        "128925e60108",
+        "211f3486198b"
       ],
       "recallDays": [
         "2026-04-18",
