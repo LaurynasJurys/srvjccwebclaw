@@ -56,7 +56,7 @@
   },
   "meta": {
     "lastTouchedVersion": "2026.4.15",
-    "lastTouchedAt": "2026-04-18T07:23:57.949Z"
+    "lastTouchedAt": "2026-04-19T19:26:55.726Z"
   },
   "plugins": {
     "entries": {
@@ -133,6 +133,9 @@
             "includeCompiledDigestPrompt": true
           }
         }
+      },
+      "discord": {
+        "config": {}
       }
     }
   },
@@ -143,6 +146,16 @@
         "+37067026355"
       ],
       "enabled": true
+    },
+    "discord": {
+      "enabled": true,
+      "token": "MTQ5NDMwMjExODY2Mjc3MDcwOA.GUn5WP.cX5yVzMPF2yHQiTiffyoq_enguSCm7ci_R5Y4w",
+      "groupPolicy": "allowlist",
+      "dmPolicy": "allowlist",
+      "allowFrom": [
+        "147099563864358913"
+      ],
+      "defaultTo": "channel:1485021229638226125"
     }
   },
   "wizard": {
