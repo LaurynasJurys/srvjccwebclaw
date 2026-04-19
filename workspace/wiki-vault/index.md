@@ -3,13 +3,13 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 5
+- Total pages: 6
 - Claims: 0
 - Sources: 0
 - Entities: 0
 - Concepts: 0
 - Syntheses: 0
-- Reports: 5
+- Reports: 6
 
 ### Sources
 - No sources yet.
@@ -26,6 +26,7 @@
 ### Reports
 - [[reports/claim-health|Claim Health]]
 - [[reports/contradictions|Contradictions]]
+- [[reports/lint|Lint Report]]
 - [[reports/low-confidence|Low Confidence]]
 - [[reports/open-questions|Open Questions]]
 - [[reports/stale-pages|Stale Pages]]
