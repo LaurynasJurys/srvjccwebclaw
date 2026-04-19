@@ -1,0 +1,135 @@
+{
+  "fact_claims": [
+    {
+      "id": "fact.memory-wiki-bridge-enabled",
+      "claim": "OpenClaw memory-wiki is enabled in bridge mode with auto compile, daily note indexing, memory root indexing, dream report indexing, and shared search across corpus all.",
+      "domain": "memory-operations",
+      "subject_refs": [
+        "system.openclaw"
+      ],
+      "confidence": 0.93,
+      "validation_state": "verified",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-18.md",
+          "source_locator": "L1-L5",
+          "note": "Daily note recording memory-wiki enablement details.",
+          "weight": 0.92
+        },
+        {
+          "source_kind": "wiki-report",
+          "source_path": "wiki-vault/reports/contradictions.md",
+          "source_locator": "generated@2026-04-18T12:23:18.801Z",
+          "note": "Wiki vault is active and currently reporting no contradictions.",
+          "weight": 0.35
+        }
+      ]
+    },
+    {
+      "id": "fact.memory-layer-3-4-current-state",
+      "claim": "Layer 3 is currently a hybrid durable operational memory using Wiki.js plus disk memory files and bridge indexing, while layer 4 is early-stage reflective and procedural memory driven by dreaming and nightly reconciliation rather than a fully structured procedural engine.",
+      "domain": "memory-architecture",
+      "subject_refs": [
+        "system.openclaw",
+        "service.wikijs"
+      ],
+      "confidence": 0.9,
+      "validation_state": "verified",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-18.md",
+          "source_locator": "L4-L5",
+          "note": "Daily note explicitly describing current layer 3 and layer 4 implementation status.",
+          "weight": 0.95
+        },
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/.dreams/events.jsonl",
+          "source_locator": "2026-04-18 recall events",
+          "note": "Dream/recall events repeatedly reference the memory layer implementation map.",
+          "weight": 0.45
+        }
+      ]
+    }
+  ],
+  "reflections": [
+    {
+      "id": "reflection.bridge-enabled-but-no-exported-artifacts",
+      "observation": "The wiki vault is running in bridge mode, but zero exported artifacts are currently available from the memory plugin.",
+      "pattern": "Bridge indexing can be configured correctly while still lacking public artifact exports, which limits cross-surface provenance.",
+      "recommended_action": "Treat current bridge results as partial and only promote wiki-backed memory updates that are directly supported by workspace evidence until export artifacts appear.",
+      "related_refs": [
+        "wiki-vault/reports/claim-health",
+        "wiki-vault/reports/open-questions"
+      ],
+      "confidence": 0.87,
+      "promotion_state": "candidate",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "wiki-status",
+          "source_path": "wiki-vault",
+          "source_locator": "bridge enabled, 0 exported artifacts",
+          "note": "Direct wiki status warning from this maintenance run.",
+          "weight": 0.97
+        }
+      ]
+    }
+  ],
+  "procedures": [
+    {
+      "id": "procedure.nightly-memory-reconcile-loop",
+      "name": "Nightly memory and wiki reconcile loop",
+      "purpose": "Run the ordered nightly reconciliation flow across daily memory, dreams, structured SQLite memory, and wiki state without silently canonizing risky claims.",
+      "preconditions": [
+        "Recent daily memory notes or workspace artifacts exist",
+        "structured-memory/memory.db exists",
+        "wiki vault is ready"
+      ],
+      "steps": [
+        "Gather recent evidence from daily memory files, dream outputs, relevant workspace memory artifacts, and useful wiki changes.",
+        "Generate a candidate payload of fact claims, reflections, and procedures with evidence refs.",
+        "Ingest the candidate payload into structured-memory/memory.db.",
+        "Run wiki and memory lint or reconcile checks, then inspect contradictions, open questions, and provenance gaps.",
+        "Update durable wiki-backed operational memory only for low-risk, well-supported items.",
+        "Notify Laurynas only when there is a meaningful result, contradiction, approval-needed issue, or blocker."
+      ],
+      "expected_outcomes": [
+        "Structured memory gains evidence-backed candidate or verified records.",
+        "Wiki reports stay reconciled with current evidence.",
+        "Risky domains remain suggestion-based rather than silently canonized."
+      ],
+      "rollback": [
+        "Remove or downgrade inserted records whose evidence is weak or contradictory.",
+        "Skip wiki updates when support is incomplete."
+      ],
+      "safety_notes": [
+        "Keep secrets out of payloads and outputs.",
+        "Do not auto-promote risky security or access-control claims without strong direct evidence."
+      ],
+      "confidence": 0.9,
+      "approval_state": "approved",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-18.md",
+          "source_locator": "L2-L5",
+          "note": "Daily note records dreaming, bridge mode, and nightly maintenance enablement.",
+          "weight": 0.9
+        },
+        {
+          "source_kind": "workspace-file",
+          "source_path": "structured-memory/ingest_candidates.py",
+          "source_locator": "main()",
+          "note": "Existing ingestion helper supports the candidate payload workflow.",
+          "weight": 0.85
+        }
+      ]
+    }
+  ]
+}
