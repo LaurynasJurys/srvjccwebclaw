@@ -56,7 +56,7 @@
   },
   "meta": {
     "lastTouchedVersion": "2026.4.15",
-    "lastTouchedAt": "2026-04-19T19:26:55.726Z"
+    "lastTouchedAt": "2026-04-19T19:32:15.414Z"
   },
   "plugins": {
     "entries": {
@@ -155,7 +155,19 @@
       "allowFrom": [
         "147099563864358913"
       ],
-      "defaultTo": "channel:1485021229638226125"
+      "defaultTo": "channel:1485021229638226125",
+      "guilds": {
+        "1485021229638226125": {
+          "channels": {
+            "general": {
+              "enabled": true,
+              "users": [
+                "147099563864358913"
+              ]
+            }
+          }
+        }
+      }
     }
   },
   "wizard": {
