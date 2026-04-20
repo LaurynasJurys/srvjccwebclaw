@@ -9,5 +9,12 @@ status: active
 
 ## Generated
 <!-- openclaw:wiki:lint:start -->
-No issues found.
+- Errors: 0
+- Warnings: 1
+
+### Warnings
+- `syntheses/nightly-memory-reconcile-2026-04-20.md`: Page lists 1 open question.
+
+### Open Questions
+- `syntheses/nightly-memory-reconcile-2026-04-20.md`: Page lists 1 open question.
 <!-- openclaw:wiki:lint:end -->
