@@ -1,0 +1,114 @@
+{
+  "fact_claims": [
+    {
+      "id": "fact.discord-main-communication-direction",
+      "claim": "Discord is now intended to become the main communication surface for OpenClaw instead of WhatsApp, while WhatsApp remains active during transition.",
+      "domain": "communication-preference",
+      "subject_refs": [
+        "person.laurynas",
+        "system.openclaw"
+      ],
+      "confidence": 0.94,
+      "validation_state": "verified",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-19.md",
+          "source_locator": "L6-L8",
+          "note": "Daily note records Discord becoming the main communication surface while WhatsApp is still active.",
+          "weight": 0.95
+        },
+        {
+          "source_kind": "workspace-file",
+          "source_path": "wiki-vault/infra/openclaw-discord.md",
+          "source_locator": "Current direction and Current state",
+          "note": "Wiki page matches the transition direction and current state.",
+          "weight": 0.72
+        }
+      ]
+    },
+    {
+      "id": "fact.discord-secret-shape-needs-split",
+      "claim": "The current Discord Vault secret shape is imperfect because ChannelId has been used as a guild id and should later be split into distinct GuildId and ChannelId fields.",
+      "domain": "configuration-debt",
+      "subject_refs": [
+        "service.discord",
+        "service.vault"
+      ],
+      "confidence": 0.91,
+      "validation_state": "verified",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-19.md",
+          "source_locator": "L8-L9",
+          "note": "Daily note records the current Discord secret shape issue.",
+          "weight": 0.94
+        },
+        {
+          "source_kind": "workspace-file",
+          "source_path": "wiki-vault/infra/openclaw-discord.md",
+          "source_locator": "Known issue",
+          "note": "Wiki page documents the same configuration debt.",
+          "weight": 0.8
+        }
+      ]
+    },
+    {
+      "id": "fact.voice-path-starts-on-discord",
+      "claim": "Laurynas wants a path toward talking to OpenClaw by voice, likely starting from Discord before a more advanced voice flow later.",
+      "domain": "product-direction",
+      "subject_refs": [
+        "person.laurynas",
+        "system.openclaw",
+        "service.discord"
+      ],
+      "confidence": 0.9,
+      "validation_state": "verified",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-19.md",
+          "source_locator": "L9-L9",
+          "note": "Daily note records the voice-access direction.",
+          "weight": 0.93
+        },
+        {
+          "source_kind": "workspace-file",
+          "source_path": "wiki-vault/infra/openclaw-discord.md",
+          "source_locator": "Next direction",
+          "note": "Wiki page reflects the same next direction.",
+          "weight": 0.76
+        }
+      ]
+    }
+  ],
+  "reflections": [
+    {
+      "id": "reflection.bridge-no-exported-artifacts-2026-04-20",
+      "observation": "The wiki vault remains in bridge mode but still reports zero exported memory artifacts, so shared search and provenance are only partially grounded by bridge output.",
+      "pattern": "Bridge-mode enablement can outpace actual artifact export availability, creating a gap between configured reconciliation and observable source coverage.",
+      "recommended_action": "Keep relying on workspace memory files and explicit wiki pages as primary evidence until bridge exports appear, and treat missing exports as an operational follow-up rather than a memory fact contradiction.",
+      "related_refs": [
+        "wiki-vault/reports/lint.md",
+        "wiki-vault/reports/open-questions.md"
+      ],
+      "confidence": 0.9,
+      "promotion_state": "candidate",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "wiki-status",
+          "source_path": "wiki-vault",
+          "source_locator": "Bridge enabled (0 exported artifacts)",
+          "note": "Current wiki status warning from this nightly run.",
+          "weight": 0.98
+        }
+      ]
+    }
+  ],
+  "procedures": []
+}
