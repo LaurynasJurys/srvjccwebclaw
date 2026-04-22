@@ -41,4 +41,5 @@ Operational stance:
 ### Related Pages
 
 - [[syntheses/nightly-memory-reconcile-2026-04-20|Nightly memory reconcile 2026-04-20]]
+- [[syntheses/nightly-memory-reconcile-2026-04-22|Nightly memory reconcile 2026-04-22]]
 <!-- openclaw:wiki:related:end -->
