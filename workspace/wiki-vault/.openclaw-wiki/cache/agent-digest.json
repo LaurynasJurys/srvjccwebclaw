@@ -1,7 +1,7 @@
 {
   "pageCounts": {
     "entity": 0,
-    "concept": 0,
+    "concept": 1,
     "source": 0,
     "synthesis": 3,
     "report": 6
@@ -20,6 +20,24 @@
   },
   "contradictionClusters": [],
   "pages": [
+    {
+      "id": "concept.coding-memory-recall",
+      "title": "Coding memory recall",
+      "kind": "concept",
+      "path": "concepts/coding-memory-recall.md",
+      "sourceIds": [
+        "memory/2026-04-22.md",
+        "MEMORY.md",
+        "memory/2026-04-18.md"
+      ],
+      "questions": [],
+      "contradictions": [],
+      "confidence": 0.87,
+      "freshnessLevel": "fresh",
+      "lastTouchedAt": "2026-04-22T05:26:00Z",
+      "claimCount": 0,
+      "topClaims": []
+    },
     {
       "id": "report.claim-health",
       "title": "Claim Health",

@@ -39,6 +39,7 @@ Operational stance:
 <!-- openclaw:wiki:related:start -->
 ### Related Pages
 
+- [[concepts/coding-memory-recall|Coding memory recall]]
 - [[syntheses/nightly-memory-reconcile-2026-04-21|Nightly memory reconcile 2026-04-21]]
 - [[syntheses/nightly-memory-reconcile-2026-04-22|Nightly memory reconcile 2026-04-22]]
 <!-- openclaw:wiki:related:end -->

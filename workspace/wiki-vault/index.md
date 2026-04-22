@@ -3,11 +3,11 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 9
+- Total pages: 10
 - Claims: 0
 - Sources: 0
 - Entities: 0
-- Concepts: 0
+- Concepts: 1
 - Syntheses: 3
 - Reports: 6
 
@@ -18,7 +18,7 @@
 - No entities yet.
 
 ### Concepts
-- No concepts yet.
+- [[concepts/coding-memory-recall|Coding memory recall]]
 
 ### Syntheses
 - [[syntheses/nightly-memory-reconcile-2026-04-20|Nightly memory reconcile 2026-04-20]]

@@ -2,5 +2,5 @@
 
 ## Generated
 <!-- openclaw:wiki:concepts:index:start -->
-- No concepts yet.
+- [[concepts/coding-memory-recall|Coding memory recall]]
 <!-- openclaw:wiki:concepts:index:end -->

@@ -12,3 +12,7 @@
 {"type":"lint","timestamp":"2026-04-22T00:00:47.415Z","details":{"issueCount":2,"reportPath":"reports/lint.md"}}
 {"type":"compile","timestamp":"2026-04-22T00:01:19.250Z","details":{"pageCounts":{"entity":0,"concept":0,"source":0,"synthesis":3,"report":6},"updatedFiles":["syntheses/nightly-memory-reconcile-2026-04-20.md","syntheses/nightly-memory-reconcile-2026-04-21.md","syntheses/nightly-memory-reconcile-2026-04-22.md","reports/open-questions.md",".openclaw-wiki/cache/agent-digest.json","index.md","syntheses/index.md"]}}
 {"type":"lint","timestamp":"2026-04-22T00:01:19.252Z","details":{"issueCount":3,"reportPath":"reports/lint.md"}}
+{"type":"compile","timestamp":"2026-04-22T05:26:33.861Z","details":{"pageCounts":{"entity":0,"concept":1,"source":0,"synthesis":3,"report":6},"updatedFiles":["concepts/coding-memory-recall.md","syntheses/nightly-memory-reconcile-2026-04-22.md",".openclaw-wiki/cache/agent-digest.json","index.md","concepts/index.md"]}}
+{"type":"lint","timestamp":"2026-04-22T05:26:33.864Z","details":{"issueCount":5,"reportPath":"reports/lint.md"}}
+{"type":"compile","timestamp":"2026-04-22T05:26:48.257Z","details":{"pageCounts":{"entity":0,"concept":1,"source":0,"synthesis":3,"report":6},"updatedFiles":["concepts/coding-memory-recall.md","syntheses/nightly-memory-reconcile-2026-04-20.md","syntheses/nightly-memory-reconcile-2026-04-21.md",".openclaw-wiki/cache/agent-digest.json"]}}
+{"type":"lint","timestamp":"2026-04-22T05:26:48.261Z","details":{"issueCount":3,"reportPath":"reports/lint.md"}}
