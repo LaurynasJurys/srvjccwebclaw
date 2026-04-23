@@ -1,0 +1,79 @@
+{
+  "fact_claims": [
+    {
+      "id": "fact.coding-memory-recall-gap-identified",
+      "claim": "As of 2026-04-22, coding-session recall is not yet first-class in the current OpenClaw memory setup.",
+      "domain": "memory-capability-gap",
+      "subject_refs": ["system.openclaw", "concept.coding-memory-recall"],
+      "confidence": 0.9,
+      "validation_state": "verified",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-22.md",
+          "source_locator": "L1-L4",
+          "note": "Daily memory note explicitly identifies coding-session recall as not yet first-class.",
+          "weight": 0.95
+        },
+        {
+          "source_kind": "workspace-file",
+          "source_path": "wiki-vault/concepts/coding-memory-recall.md",
+          "source_locator": "Summary and operational rule",
+          "note": "Wiki concept page captures intended practice and importance of coding recall.",
+          "weight": 0.72
+        }
+      ]
+    },
+    {
+      "id": "fact.project-task-memory-gap-identified",
+      "claim": "The main practical memory gaps identified on 2026-04-22 were lack of automatic coding-task recall preflight, weak project and task episodic summaries, and under-populated wiki artifacts despite bridge mode being enabled.",
+      "domain": "memory-capability-gap",
+      "subject_refs": ["system.openclaw"],
+      "confidence": 0.89,
+      "validation_state": "verified",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "workspace-file",
+          "source_path": "memory/2026-04-22.md",
+          "source_locator": "L3-L4",
+          "note": "Daily memory note lists the practical gaps directly.",
+          "weight": 0.96
+        }
+      ]
+    }
+  ],
+  "reflections": [
+    {
+      "id": "reflection.bridge-export-gap-still-open-2026-04-23",
+      "observation": "Nightly reconciliation still depends mostly on daily memory files and local wiki pages because bridge mode is enabled but exported public memory artifacts remain unavailable.",
+      "pattern": "Configured bridge reconciliation has stayed ahead of actual bridge artifact export for several nightly runs in a row.",
+      "recommended_action": "Keep treating bridge-export absence as an operational gap, continue evidence-first ingestion from daily notes and wiki pages, and avoid overstating compiled-wiki coverage until exports appear.",
+      "related_refs": [
+        "report.open-questions",
+        "synthesis.nightly-memory-reconcile-2026-04-22"
+      ],
+      "confidence": 0.87,
+      "promotion_state": "candidate",
+      "owner": "Laurynas",
+      "evidence_refs": [
+        {
+          "source_kind": "wiki-status",
+          "source_path": "wiki-vault",
+          "source_locator": "Bridge enabled (0 exported artifacts)",
+          "note": "Current wiki status still warns that bridge mode has zero exported artifacts.",
+          "weight": 0.98
+        },
+        {
+          "source_kind": "workspace-file",
+          "source_path": "wiki-vault/reports/open-questions.md",
+          "source_locator": "Generated section",
+          "note": "Open questions report shows the bridge-export question persisted across multiple nightly syntheses.",
+          "weight": 0.8
+        }
+      ]
+    }
+  ],
+  "procedures": []
+}
