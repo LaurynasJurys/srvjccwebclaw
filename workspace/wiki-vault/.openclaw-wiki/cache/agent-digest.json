@@ -3,7 +3,7 @@
     "entity": 0,
     "concept": 1,
     "source": 0,
-    "synthesis": 3,
+    "synthesis": 4,
     "report": 6
   },
   "claimCount": 0,
@@ -98,7 +98,7 @@
       "questions": [],
       "contradictions": [],
       "freshnessLevel": "fresh",
-      "lastTouchedAt": "2026-04-22T00:01:19.230Z",
+      "lastTouchedAt": "2026-04-23T00:02:14.157Z",
       "claimCount": 0,
       "topClaims": []
     },
@@ -176,6 +176,31 @@
       "confidence": 0.86,
       "freshnessLevel": "fresh",
       "lastTouchedAt": "2026-04-22T00:00:00Z",
+      "claimCount": 0,
+      "topClaims": []
+    },
+    {
+      "id": "synthesis.nightly-memory-reconcile-2026-04-23",
+      "title": "Nightly memory reconcile 2026-04-23",
+      "kind": "synthesis",
+      "path": "syntheses/nightly-memory-reconcile-2026-04-23.md",
+      "sourceIds": [
+        "memory/2026-04-22.md",
+        "memory/2026-04-19.md",
+        "MEMORY.md",
+        "memory/.dreams/short-term-recall.json",
+        "memory/.dreams/events.jsonl",
+        "wiki-vault/concepts/coding-memory-recall.md",
+        "wiki-vault/infra/openclaw-discord.md",
+        "wiki-vault/reports/open-questions.md"
+      ],
+      "questions": [
+        "Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?"
+      ],
+      "contradictions": [],
+      "confidence": 0.89,
+      "freshnessLevel": "fresh",
+      "lastTouchedAt": "2026-04-23T00:00:00Z",
       "claimCount": 0,
       "topClaims": []
     }
