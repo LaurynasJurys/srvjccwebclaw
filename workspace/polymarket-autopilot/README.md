@@ -39,10 +39,28 @@ npm run report
 - Fill logic is conservative but still simplified
 - Strategy logic is intentionally basic for v1
 
+## Argo CD / Kubernetes
+
+This repo now includes a starter Kubernetes layout in `k8s/` for Argo CD.
+
+Expected flow:
+- push this app code to its own repo, for example `git@github.com:LaurynasJurys/polymarket-autopilot.git`
+- build and publish the container image, for example `ghcr.io/laurynasjurys/polymarket-autopilot:latest`
+- let Argo CD sync from `k8s/overlays/prod`
+
+Current manifests include:
+- namespace
+- configmap
+- persistent volume claim for SQLite
+- scan CronJob
+- report CronJob
+
 ## Good next steps
 
-1. Add multi-snapshot indicators instead of only previous-snapshot comparisons
-2. Add market-category exposure caps
-3. Add a backtest runner over stored snapshots
-4. Add message delivery automation for reports
-5. Add dashboard charts from SQLite
+1. Push this app into its own Git repo
+2. Add GitHub Actions to build and publish the image
+3. Wire report delivery to WhatsApp or Discord instead of stdout only
+4. Add multi-snapshot indicators instead of only previous-snapshot comparisons
+5. Add market-category exposure caps
+6. Add a backtest runner over stored snapshots
+7. Add dashboard charts from SQLite

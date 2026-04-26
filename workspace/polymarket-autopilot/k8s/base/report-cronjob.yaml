@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: polymarket-autopilot-report
+  namespace: polymarket-autopilot
+spec:
+  schedule: "0 8 * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: report
+              image: ghcr.io/laurynasjurys/polymarket-autopilot:latest
+              command: ["sh", "-lc", "node src/init-db.js && node src/report.js"]
+              envFrom:
+                - configMapRef:
+                    name: polymarket-autopilot-config
+              volumeMounts:
+                - name: data
+                  mountPath: /data
+          volumes:
+            - name: data
+              persistentVolumeClaim:
+                claimName: polymarket-autopilot-data

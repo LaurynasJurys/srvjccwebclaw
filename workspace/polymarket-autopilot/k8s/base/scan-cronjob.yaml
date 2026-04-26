@@ -1,0 +1,29 @@
+apiVersion: batch/v1
+kind: CronJob
+metadata:
+  name: polymarket-autopilot-scan
+  namespace: polymarket-autopilot
+spec:
+  schedule: "*/15 * * * *"
+  concurrencyPolicy: Forbid
+  successfulJobsHistoryLimit: 2
+  failedJobsHistoryLimit: 2
+  jobTemplate:
+    spec:
+      template:
+        spec:
+          restartPolicy: OnFailure
+          containers:
+            - name: scan
+              image: ghcr.io/laurynasjurys/polymarket-autopilot:latest
+              command: ["sh", "-lc", "node src/init-db.js && node src/scan.js"]
+              envFrom:
+                - configMapRef:
+                    name: polymarket-autopilot-config
+              volumeMounts:
+                - name: data
+                  mountPath: /data
+          volumes:
+            - name: data
+              persistentVolumeClaim:
+                claimName: polymarket-autopilot-data
