@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
         - name: web
-          image: ghcr.io/laurynasjurys/polymarket-autopilot:latest
+          image: ghcr.io/laurynasjurys/polymarket-autopilot@sha256:acf4771b9e7c28139ada17b6c882e9652f7e9bc729402753afddc77729704073
           imagePullPolicy: Always
           command: ["sh", "-lc", "node src/init-db.js && node src/server.js"]
           envFrom:
