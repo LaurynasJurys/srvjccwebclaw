@@ -1,0 +1,36 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: polymarket-autopilot
+  namespace: polymarket-autopilot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: polymarket-autopilot
+  template:
+    metadata:
+      labels:
+        app: polymarket-autopilot
+    spec:
+      containers:
+        - name: web
+          image: ghcr.io/laurynasjurys/polymarket-autopilot:latest
+          imagePullPolicy: Always
+          command: ["sh", "-lc", "node src/init-db.js && node src/server.js"]
+          envFrom:
+            - configMapRef:
+                name: polymarket-autopilot-config
+          env:
+            - name: PORT
+              value: "3000"
+          ports:
+            - containerPort: 3000
+              name: http
+          volumeMounts:
+            - name: data
+              mountPath: /data
+      volumes:
+        - name: data
+          persistentVolumeClaim:
+            claimName: polymarket-autopilot-data

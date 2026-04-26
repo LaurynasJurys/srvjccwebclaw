@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: polymarket-autopilot
+  namespace: polymarket-autopilot
+spec:
+  selector:
+    app: polymarket-autopilot
+  ports:
+    - name: http
+      port: 80
+      targetPort: 3000

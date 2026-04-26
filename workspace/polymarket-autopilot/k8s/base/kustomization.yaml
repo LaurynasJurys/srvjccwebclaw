@@ -4,5 +4,8 @@ resources:
   - namespace.yaml
   - configmap.yaml
   - pvc.yaml
+  - deployment.yaml
+  - service.yaml
+  - ingress.yaml
   - scan-cronjob.yaml
   - report-cronjob.yaml

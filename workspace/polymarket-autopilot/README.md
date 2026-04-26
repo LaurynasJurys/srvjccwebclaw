@@ -52,6 +52,9 @@ Current manifests include:
 - namespace
 - configmap
 - persistent volume claim for SQLite
+- dashboard deployment
+- dashboard service
+- dashboard ingress
 - scan CronJob
 - report CronJob
 
@@ -59,7 +62,7 @@ Current manifests include:
 
 1. Push this app into its own Git repo
 2. Add GitHub Actions to build and publish the image
-3. Wire report delivery to WhatsApp or Discord instead of stdout only
+3. Add Keycloak auth middleware or OIDC-aware upstream auth in front of the dashboard
 4. Add multi-snapshot indicators instead of only previous-snapshot comparisons
 5. Add market-category exposure caps
 6. Add a backtest runner over stored snapshots

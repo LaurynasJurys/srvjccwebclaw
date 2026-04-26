@@ -6,7 +6,8 @@
   "scripts": {
     "init-db": "node src/init-db.js",
     "scan": "node src/scan.js",
-    "report": "node src/report.js"
+    "report": "node src/report.js",
+    "server": "node src/server.js"
   },
   "dependencies": {
     "better-sqlite3": "^11.10.0"
