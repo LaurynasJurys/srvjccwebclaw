@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-04-25T00:00:48.329Z",
+  "updatedAt": "2026-04-26T02:06:22.114Z",
   "entries": {
     "memory:memory/2026-04-17.md:1:22": {
       "key": "memory:memory/2026-04-17.md:1:22",
@@ -111,13 +111,13 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "- Set up SOPS + age for GitOps secrets, including Argo-side decryption support, and moved Keycloak/Wiki.js Kubernetes secrets to encrypted GitOps-managed config. - Deployed Vault on the host outside k3s, bound privately on loopback + Tailscale only, initialized/unsealed it, and enabled KV v2. - Established Vault AppRole-based automation access and granted scoped read access to the Keycloak secret path. - Created Keycloak realm `jcc` and configured a `WikiApp` OIDC client; realm hardening enabled email verification, reset password, brute-force protection, disabled registration, and disabled direct access grants for the Wiki client. - Began replacing staging.jurys.lt Traefik basic-auth with Ke",
-      "recallCount": 13,
+      "recallCount": 14,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 10.189719581704397,
-      "maxScore": 0.8115169301441094,
+      "totalScore": 11.048672519432648,
+      "maxScore": 0.8589529377282507,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-04-25T00:00:48.329Z",
+      "lastRecalledAt": "2026-04-26T02:06:22.114Z",
       "queryHashes": [
         "5399429133d3",
         "4690d25a1281",
@@ -131,7 +131,8 @@
         "b53bb6929d80",
         "4e9137356949",
         "b04ba6a7f3d7",
-        "e89c2f57c633"
+        "e89c2f57c633",
+        "89c8c62f5b7e"
       ],
       "recallDays": [
         "2026-04-18",
@@ -141,7 +142,8 @@
         "2026-04-22",
         "2026-04-23",
         "2026-04-24",
-        "2026-04-25"
+        "2026-04-25",
+        "2026-04-26"
       ],
       "conceptTags": [
         "argo-side",
@@ -161,13 +163,13 @@
       "endLine": 58,
       "source": "memory",
       "snippet": "- Pushed repo fixes for staging auth under commits `8fbff8d`, `5b56831`, `6b4cc25`, `f4948fa`, and `74dd0a4`. - Wiki.js local admin credentials in Vault path `secret/Wiki.local` were corrected and used successfully to create initial infra/runbook pages in Wiki.js. - Created Wiki.js pages: `infra/openclaw`, `infra/k3s-argocd`, `infra/vault`, `infra/keycloak`, `infra/wikijs`, and `runbooks/staging-auth`. - Wiki.js native Keycloak auth strategy initially failed with UI error `Invalid authentication provider`; root cause was that the strategy row existed but persisted config fields were all null, causing startup error `host is required`. - Keycloak provider config was repaired directly in Wiki.",
-      "recallCount": 9,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 6.4240127148442845,
+      "totalScore": 7.276758927021204,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-04-23T00:00:30.398Z",
+      "lastRecalledAt": "2026-04-26T02:06:22.114Z",
       "queryHashes": [
         "5399429133d3",
         "128925e60108",
@@ -177,7 +179,8 @@
         "d532da8aa732",
         "84d4c212e039",
         "b53bb6929d80",
-        "4e9137356949"
+        "4e9137356949",
+        "89c8c62f5b7e"
       ],
       "recallDays": [
         "2026-04-18",
@@ -185,7 +188,8 @@
         "2026-04-20",
         "2026-04-21",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-26"
       ],
       "conceptTags": [
         "wiki.js",
@@ -205,13 +209,13 @@
       "endLine": 54,
       "source": "memory",
       "snippet": "- Established Vault AppRole-based automation access and granted scoped read access to the Keycloak secret path. - Created Keycloak realm `jcc` and configured a `WikiApp` OIDC client; realm hardening enabled email verification, reset password, brute-force protection, disabled registration, and disabled direct access grants for the Wiki client. - Began replacing staging.jurys.lt Traefik basic-auth with Keycloak-backed oauth2-proxy via GitOps; repo commit `d57fef9` exists but rollout was not yet fully completed or verified because the Keycloak client secret needed one cleanup/fix. - Finished staging Keycloak auth rollout: `juryslt-stage` reached `Synced|Healthy|Succeeded`, `juryslt-oauth2-proxy",
-      "recallCount": 7,
+      "recallCount": 8,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4.419801899864234,
-      "maxScore": 0.6314003264056228,
+      "totalScore": 5.2805183010528225,
+      "maxScore": 0.8607164011885884,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-04-23T00:00:30.398Z",
+      "lastRecalledAt": "2026-04-26T02:06:22.114Z",
       "queryHashes": [
         "5399429133d3",
         "128925e60108",
@@ -219,7 +223,8 @@
         "d532da8aa732",
         "84d4c212e039",
         "b53bb6929d80",
-        "4e9137356949"
+        "4e9137356949",
+        "89c8c62f5b7e"
       ],
       "recallDays": [
         "2026-04-18",
@@ -227,7 +232,8 @@
         "2026-04-20",
         "2026-04-21",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-26"
       ],
       "conceptTags": [
         "approle-based",
@@ -298,22 +304,24 @@
       "endLine": 12,
       "source": "memory",
       "snippet": "# 2026-04-19 - Repositioned `staging.jurys.lt` around AI deployment as the main business, with Azure and disaster recovery as supporting services. - Simplified the services page for mobile and sales use, and added a new `training.html` page for text trainings and video trainings. - Enabled the OpenClaw Discord channel using bot credentials stored in Vault under `secret/Discord`. - Confirmed Vault root credentials live under `/root/.vault` and should only be used when explicitly authorized. - Recorded/confirmed the standing rule that secrets must never be shared in chat and should only be stored/retrieved through Vault. - Discord is now intended to become the main communication surface inste",
-      "recallCount": 3,
+      "recallCount": 4,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 3,
+      "totalScore": 4,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-20T00:15:15.738Z",
-      "lastRecalledAt": "2026-04-23T00:00:30.398Z",
+      "lastRecalledAt": "2026-04-26T02:06:22.114Z",
       "queryHashes": [
         "d532da8aa732",
         "b53bb6929d80",
-        "4e9137356949"
+        "4e9137356949",
+        "89c8c62f5b7e"
       ],
       "recallDays": [
         "2026-04-20",
         "2026-04-22",
-        "2026-04-23"
+        "2026-04-23",
+        "2026-04-26"
       ],
       "conceptTags": [
         "staging.jurys.lt",
