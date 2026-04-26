@@ -13,5 +13,7 @@ resources:
   - oauth2-proxy/middleware.yaml
   - oauth2-proxy/errors-middleware.yaml
   - oauth2-proxy/secret.yaml
+  - oauth2-proxy/reconcile-keycloak-configmap.yaml
+  - oauth2-proxy/reconcile-keycloak-job.yaml
   - scan-cronjob.yaml
   - report-cronjob.yaml

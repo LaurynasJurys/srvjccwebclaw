@@ -64,7 +64,7 @@ Current manifests include:
 
 1. Push this app into its own Git repo
 2. Add GitHub Actions to build and publish the image
-3. Replace the oauth2-proxy placeholder client secret with the real Keycloak client secret
+3. Verify the Vault-driven Keycloak reconciler creates and refreshes the oauth2-proxy secret correctly
 4. Add multi-snapshot indicators instead of only previous-snapshot comparisons
 5. Add market-category exposure caps
 6. Add a backtest runner over stored snapshots

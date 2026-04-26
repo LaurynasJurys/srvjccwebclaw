@@ -5,7 +5,7 @@ metadata:
   namespace: polymarket-autopilot
 data:
   reconcile.py: |
-    import base64, json, os, pathlib, ssl, subprocess, urllib.parse, urllib.request
+    import json, os, pathlib, ssl, subprocess, urllib.parse, urllib.request
 
     VAULT_ADDR = os.environ.get('VAULT_ADDR', 'http://127.0.0.1:8200')
     BASE_URL = os.environ.get('KEYCLOAK_BASE', 'https://auth.jurys.lt')
@@ -16,8 +16,8 @@ data:
     K8S_SECRET = os.environ.get('K8S_SECRET', 'polymarket-oauth2-proxy')
     K8S_NAMESPACE = os.environ.get('K8S_NAMESPACE', 'polymarket-autopilot')
 
-    def run(cmd, env=None):
-      p = subprocess.run(cmd, text=True, capture_output=True, env=env or os.environ.copy())
+    def run(cmd, env=None, input_text=None):
+      p = subprocess.run(cmd, text=True, input=input_text, capture_output=True, env=env or os.environ.copy())
       if p.returncode != 0:
         raise RuntimeError((p.stdout or '') + (p.stderr or ''))
       return p.stdout
@@ -54,8 +54,7 @@ data:
       clients = json.loads(r.read())
 
     if clients:
-      client = clients[0]
-      client_id = client['id']
+      client_id = clients[0]['id']
     else:
       payload = json.dumps({
         'clientId': CLIENT_ID,
@@ -81,14 +80,15 @@ data:
       client_secret = json.loads(r.read())['value']
 
     cookie_secret = os.environ['OAUTH2_PROXY_COOKIE_SECRET']
-    patch = {
-      'apiVersion': 'v1',
-      'kind': 'Secret',
-      'metadata': {'name': K8S_SECRET, 'namespace': K8S_NAMESPACE},
-      'type': 'Opaque',
-      'stringData': {
-        'OAUTH2_PROXY_CLIENT_SECRET': client_secret,
-        'OAUTH2_PROXY_COOKIE_SECRET': cookie_secret,
-      }
-    }
-    run(['kubectl', 'apply', '-f', '-'], env=os.environ.copy() | {'KUBECTL_EXTERNAL_DIFF':'cat'})
+    manifest = f'''apiVersion: v1
+kind: Secret
+metadata:
+  name: {K8S_SECRET}
+  namespace: {K8S_NAMESPACE}
+type: Opaque
+stringData:
+  OAUTH2_PROXY_CLIENT_SECRET: {client_secret}
+  OAUTH2_PROXY_COOKIE_SECRET: {cookie_secret}
+'''
+    run(['kubectl', 'apply', '-f', '-'], input_text=manifest)
+    print('polymarket oauth2-proxy secret reconciled successfully')
