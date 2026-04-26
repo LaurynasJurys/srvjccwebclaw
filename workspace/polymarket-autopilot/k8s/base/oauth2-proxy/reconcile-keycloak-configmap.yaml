@@ -1,0 +1,94 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: polymarket-reconcile-keycloak
+  namespace: polymarket-autopilot
+data:
+  reconcile.py: |
+    import base64, json, os, pathlib, ssl, subprocess, urllib.parse, urllib.request
+
+    VAULT_ADDR = os.environ.get('VAULT_ADDR', 'http://127.0.0.1:8200')
+    BASE_URL = os.environ.get('KEYCLOAK_BASE', 'https://auth.jurys.lt')
+    REALM = os.environ.get('KEYCLOAK_REALM', 'jcc')
+    CLIENT_ID = os.environ.get('CLIENT_ID', 'polymarket-autopilot')
+    REDIRECT_URL = os.environ.get('REDIRECT_URL', 'https://polymarket.jurys.lt/oauth2/callback')
+    WEB_ORIGIN = os.environ.get('WEB_ORIGIN', 'https://polymarket.jurys.lt')
+    K8S_SECRET = os.environ.get('K8S_SECRET', 'polymarket-oauth2-proxy')
+    K8S_NAMESPACE = os.environ.get('K8S_NAMESPACE', 'polymarket-autopilot')
+
+    def run(cmd, env=None):
+      p = subprocess.run(cmd, text=True, capture_output=True, env=env or os.environ.copy())
+      if p.returncode != 0:
+        raise RuntimeError((p.stdout or '') + (p.stderr or ''))
+      return p.stdout
+
+    base = os.environ.copy()
+    base['VAULT_ADDR'] = VAULT_ADDR
+    base['HOME'] = '/tmp'
+    base['VAULT_TOKEN_HELPER'] = ''
+
+    role_id = pathlib.Path('/root/.vault/openclaw-role-id').read_text().strip()
+    secret_id = pathlib.Path('/root/.vault/openclaw-secret-id').read_text().strip()
+    login = json.loads(run(['vault','write','-format=json','auth/approle/login',f'role_id={role_id}',f'secret_id={secret_id}'], base))
+    env_v = base.copy()
+    env_v['VAULT_TOKEN'] = login['auth']['client_token']
+
+    keycloak = json.loads(run(['vault','kv','get','-format=json','secret/Keycloak'], env_v))['data']['data']
+    username = keycloak['Username']
+    password = keycloak['Password']
+
+    ctx = ssl.create_default_context()
+    form = urllib.parse.urlencode({
+      'grant_type':'password',
+      'client_id':'admin-cli',
+      'username':username,
+      'password':password,
+    }).encode()
+    req = urllib.request.Request(f'{BASE_URL}/realms/master/protocol/openid-connect/token', data=form, headers={'Content-Type':'application/x-www-form-urlencoded'}, method='POST')
+    with urllib.request.urlopen(req, context=ctx, timeout=30) as r:
+      token = json.loads(r.read())['access_token']
+
+    headers = {'Authorization': f'Bearer {token}', 'Content-Type':'application/json'}
+    req = urllib.request.Request(f'{BASE_URL}/admin/realms/{REALM}/clients?clientId={urllib.parse.quote(CLIENT_ID)}', headers=headers, method='GET')
+    with urllib.request.urlopen(req, context=ctx, timeout=30) as r:
+      clients = json.loads(r.read())
+
+    if clients:
+      client = clients[0]
+      client_id = client['id']
+    else:
+      payload = json.dumps({
+        'clientId': CLIENT_ID,
+        'name': CLIENT_ID,
+        'enabled': True,
+        'publicClient': False,
+        'protocol': 'openid-connect',
+        'redirectUris': [REDIRECT_URL],
+        'webOrigins': [WEB_ORIGIN],
+        'standardFlowEnabled': True,
+        'directAccessGrantsEnabled': False,
+        'serviceAccountsEnabled': False,
+      }).encode()
+      req = urllib.request.Request(f'{BASE_URL}/admin/realms/{REALM}/clients', data=payload, headers=headers, method='POST')
+      with urllib.request.urlopen(req, context=ctx, timeout=30):
+        pass
+      req = urllib.request.Request(f'{BASE_URL}/admin/realms/{REALM}/clients?clientId={urllib.parse.quote(CLIENT_ID)}', headers=headers, method='GET')
+      with urllib.request.urlopen(req, context=ctx, timeout=30) as r:
+        client_id = json.loads(r.read())[0]['id']
+
+    req = urllib.request.Request(f'{BASE_URL}/admin/realms/{REALM}/clients/{client_id}/client-secret', headers=headers, method='GET')
+    with urllib.request.urlopen(req, context=ctx, timeout=30) as r:
+      client_secret = json.loads(r.read())['value']
+
+    cookie_secret = os.environ['OAUTH2_PROXY_COOKIE_SECRET']
+    patch = {
+      'apiVersion': 'v1',
+      'kind': 'Secret',
+      'metadata': {'name': K8S_SECRET, 'namespace': K8S_NAMESPACE},
+      'type': 'Opaque',
+      'stringData': {
+        'OAUTH2_PROXY_CLIENT_SECRET': client_secret,
+        'OAUTH2_PROXY_COOKIE_SECRET': cookie_secret,
+      }
+    }
+    run(['kubectl', 'apply', '-f', '-'], env=os.environ.copy() | {'KUBECTL_EXTERNAL_DIFF':'cat'})
