@@ -1,0 +1,55 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: polymarket-oauth2-proxy
+  namespace: polymarket-autopilot
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: polymarket-oauth2-proxy
+  template:
+    metadata:
+      labels:
+        app: polymarket-oauth2-proxy
+    spec:
+      containers:
+        - name: oauth2-proxy
+          image: quay.io/oauth2-proxy/oauth2-proxy:v7.8.1
+          args:
+            - --http-address=0.0.0.0:4180
+            - --provider=keycloak-oidc
+            - --oidc-issuer-url=https://auth.jurys.lt/realms/jcc
+            - --client-id=polymarket-autopilot
+            - --email-domain=*
+            - --upstream=http://polymarket-autopilot.polymarket-autopilot.svc.cluster.local:80
+            - --reverse-proxy=true
+            - --cookie-secure=true
+            - --cookie-samesite=lax
+            - --scope=openid profile email
+            - --redirect-url=https://polymarket.jurys.lt/oauth2/callback
+            - --whitelist-domain=.jurys.lt
+            - --set-xauthrequest=true
+            - --pass-access-token=true
+            - --pass-authorization-header=true
+            - --skip-provider-button=true
+            - --insecure-oidc-skip-issuer-verification=true
+            - --insecure-oidc-skip-nonce=true
+          envFrom:
+            - secretRef:
+                name: polymarket-oauth2-proxy
+          ports:
+            - containerPort: 4180
+              name: http
+          readinessProbe:
+            httpGet:
+              path: /ping
+              port: http
+            initialDelaySeconds: 3
+            periodSeconds: 10
+          livenessProbe:
+            httpGet:
+              path: /ping
+              port: http
+            initialDelaySeconds: 10
+            periodSeconds: 20

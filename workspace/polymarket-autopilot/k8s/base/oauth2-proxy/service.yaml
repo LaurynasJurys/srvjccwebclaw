@@ -1,0 +1,12 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: polymarket-oauth2-proxy
+  namespace: polymarket-autopilot
+spec:
+  selector:
+    app: polymarket-oauth2-proxy
+  ports:
+    - name: http
+      port: 4180
+      targetPort: http
