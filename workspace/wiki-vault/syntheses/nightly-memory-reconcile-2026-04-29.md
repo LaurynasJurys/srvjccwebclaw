@@ -1,0 +1,52 @@
+---
+pageType: synthesis
+id: synthesis.nightly-memory-reconcile-2026-04-29
+title: Nightly memory reconcile 2026-04-29
+sourceIds:
+  - memory/2026-04-17.md
+  - memory/2026-04-18.md
+  - memory/2026-04-19.md
+  - memory/2026-04-22.md
+  - memory/.dreams/short-term-recall.json
+  - memory/.dreams/events.jsonl
+  - wiki-vault/syntheses/nightly-memory-reconcile-2026-04-26.md
+  - wiki-vault/reports/lint.md
+  - structured-memory/memory.db
+questions:
+  - Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?
+confidence: 0.92
+status: active
+updatedAt: 2026-04-29T00:00:00Z
+---
+
+# Nightly memory reconcile 2026-04-29
+
+## Notes
+<!-- openclaw:human:start -->
+<!-- openclaw:human:end -->
+
+## Summary
+<!-- openclaw:wiki:generated:start -->
+Nightly reconcile reviewed recent daily memory notes, dream recall artifacts, current structured-memory records, and current wiki state.
+
+Findings:
+- No new daily memory note appeared after 2026-04-22, so the newest substantive episodic evidence remains the coding-memory recall gap identified on 2026-04-22.
+- Dream recall artifacts continue to point back to the same April 17 to April 22 memory spans; they did not justify any new durable user-facing facts on their own.
+- Added one verified structured-memory fact claim that as of 2026-04-29, wiki_status still reports memory-wiki bridge mode enabled with zero exported public memory artifacts.
+- Added one candidate structured reflection that the repeated bridge-export gap is still constraining nightly synthesis coverage to daily notes, local dream artifacts, and existing wiki pages.
+- No contradictions were found in the reviewed evidence.
+- Wiki lint remains a warning-only state centered on the repeated bridge-export open question across nightly syntheses.
+
+Operational stance:
+- Keep treating daily memory files, explicit wiki pages, and evidence-backed structured-memory records as the primary canon for operational memory.
+- Treat dream outputs and recall traces as supporting evidence for retrieval patterns, not as standalone durable facts.
+- Avoid promoting additional durable wiki memory until new corroborated evidence appears or the bridge-export issue changes state.
+<!-- openclaw:wiki:generated:end -->
+
+## Related
+<!-- openclaw:wiki:related:start -->
+### Related Pages
+
+- [[concepts/coding-memory-recall|Coding memory recall]]
+- [[syntheses/nightly-memory-reconcile-2026-04-26|Nightly memory reconcile 2026-04-26]]
+<!-- openclaw:wiki:related:end -->
