@@ -3,12 +3,12 @@
 ## Generated
 <!-- openclaw:wiki:index:start -->
 - Render mode: `obsidian`
-- Total pages: 15
+- Total pages: 16
 - Claims: 0
 - Sources: 0
 - Entities: 0
 - Concepts: 1
-- Syntheses: 8
+- Syntheses: 9
 - Reports: 6
 
 ### Sources
@@ -29,6 +29,7 @@
 - [[syntheses/nightly-memory-reconcile-2026-04-25|Nightly memory reconcile 2026-04-25]]
 - [[syntheses/nightly-memory-reconcile-2026-04-26|Nightly memory reconcile 2026-04-26]]
 - [[syntheses/nightly-memory-reconcile-2026-04-29|Nightly memory reconcile 2026-04-29]]
+- [[syntheses/nightly-memory-reconcile-2026-04-30|Nightly memory reconcile 2026-04-30]]
 
 ### Reports
 - [[reports/claim-health|Claim Health]]

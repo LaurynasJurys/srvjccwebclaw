@@ -54,4 +54,5 @@ This keeps the agent from wasting turns on rediscovering context that was alread
 - [[syntheses/nightly-memory-reconcile-2026-04-25|Nightly memory reconcile 2026-04-25]]
 - [[syntheses/nightly-memory-reconcile-2026-04-26|Nightly memory reconcile 2026-04-26]]
 - [[syntheses/nightly-memory-reconcile-2026-04-29|Nightly memory reconcile 2026-04-29]]
+- [[syntheses/nightly-memory-reconcile-2026-04-30|Nightly memory reconcile 2026-04-30]]
 <!-- openclaw:wiki:related:end -->
