@@ -39,3 +39,6 @@
 - [[reports/open-questions|Open Questions]]
 - [[reports/stale-pages|Stale Pages]]
 <!-- openclaw:wiki:index:end -->
+
+## Recent syntheses
+- [[syntheses/nightly-memory-reconcile-2026-05-01|Nightly memory reconcile 2026-05-01]]
