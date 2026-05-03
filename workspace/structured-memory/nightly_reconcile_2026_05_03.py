@@ -1,0 +1,86 @@
+import json
+from pathlib import Path
+from datetime import datetime, timezone
+
+root = Path('/home/jccadmin/.openclaw/workspace')
+updated_at = datetime.now(timezone.utc).replace(microsecond=0).isoformat().replace('+00:00', 'Z')
+
+payload = {
+  'generatedAt': updated_at,
+  'fact_claims': [
+    {
+      'id': 'fact.bridge-mode-zero-exported-artifacts-2026-05-03',
+      'claim': 'As of 2026-05-03, wiki_status reports memory-wiki bridge mode enabled with zero exported public memory artifacts.',
+      'domain': 'memory-wiki',
+      'subject_refs': ['memory-wiki', 'bridge-mode', 'wiki-status'],
+      'confidence': 0.94,
+      'validation_state': 'verified',
+      'owner': 'nightly-maintenance',
+      'last_reviewed_at': updated_at,
+      'evidence_refs': [
+        {
+          'source_kind': 'wiki_status',
+          'source_path': 'wiki-vault',
+          'source_locator': 'status:2026-05-03',
+          'note': 'Bridge mode enabled, zero exported artifacts, bridge warning present.',
+          'weight': 1.0
+        },
+        {
+          'source_kind': 'memory',
+          'source_path': 'memory/2026-04-18.md',
+          'source_locator': 'lines 2-4',
+          'note': 'Bridge mode and nightly maintenance were explicitly enabled on 2026-04-18.',
+          'weight': 0.7
+        },
+        {
+          'source_kind': 'wiki',
+          'source_path': 'wiki-vault/syntheses/nightly-memory-reconcile-2026-05-02.md',
+          'source_locator': 'summary',
+          'note': 'Previous nightly synthesis recorded the same unresolved bridge export gap on 2026-05-02.',
+          'weight': 0.8
+        }
+      ]
+    }
+  ],
+  'reflections': [
+    {
+      'id': 'reflection.bridge-mode-still-without-exported-artifacts-2026-05-03',
+      'observation': 'Bridge-mode wiki reconciliation is still operating without exported public memory artifacts on 2026-05-03, so nightly synthesis remains grounded mostly in daily notes, local dream artifacts, and existing wiki pages.',
+      'pattern': 'Bridge mode remains enabled while wiki status reports zero exported artifacts across consecutive nightly reconciliations from 2026-04-20 through 2026-05-03.',
+      'recommended_action': 'Keep treating bridge-export absence as an operational follow-up, continue evidence-first ingestion from daily notes and explicit wiki pages, and avoid overstating compiled-wiki coverage until exports appear.',
+      'related_refs': ['fact.bridge-mode-zero-exported-artifacts-2026-05-03', 'synthesis.nightly-memory-reconcile-2026-05-02'],
+      'confidence': 0.88,
+      'promotion_state': 'candidate',
+      'owner': 'nightly-maintenance',
+      'last_reviewed_at': updated_at,
+      'evidence_refs': [
+        {
+          'source_kind': 'wiki_status',
+          'source_path': 'wiki-vault',
+          'source_locator': 'status:2026-05-03',
+          'note': 'Zero exported artifacts persists another night.',
+          'weight': 1.0
+        },
+        {
+          'source_kind': 'wiki',
+          'source_path': 'wiki-vault/syntheses/nightly-memory-reconcile-2026-05-02.md',
+          'source_locator': 'summary',
+          'note': 'Previous nightly synthesis recorded the same unresolved bridge export gap.',
+          'weight': 0.8
+        },
+        {
+          'source_kind': 'memory',
+          'source_path': 'memory/2026-04-22.md',
+          'source_locator': 'lines 2-4',
+          'note': 'Daily note confirms under-populated wiki artifacts remain a practical memory gap.',
+          'weight': 0.7
+        }
+      ]
+    }
+  ],
+  'procedures': []
+}
+
+out = root / 'structured-memory' / 'nightly_candidates-2026-05-03.json'
+out.write_text(json.dumps(payload, indent=2) + '\n')
+print(json.dumps({'wrote': str(out), 'generatedAt': updated_at}, indent=2))
