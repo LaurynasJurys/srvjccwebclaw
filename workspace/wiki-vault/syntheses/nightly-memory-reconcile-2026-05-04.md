@@ -1,24 +1,23 @@
 ---
 pageType: synthesis
-id: synthesis.nightly-memory-reconcile-2026-05-01
-title: Nightly memory reconcile 2026-05-01
+id: synthesis.nightly-memory-reconcile-2026-05-04
+title: Nightly memory reconcile 2026-05-04
 sourceIds:
   - memory/2026-04-18.md
-  - memory/2026-04-19.md
   - memory/2026-04-22.md
   - memory/.dreams/short-term-recall.json
   - memory/.dreams/events.jsonl
-  - wiki-vault/syntheses/nightly-memory-reconcile-2026-04-30.md
+  - wiki-vault/syntheses/nightly-memory-reconcile-2026-05-03.md
   - wiki-vault/reports/lint.md
   - structured-memory/memory.db
 questions:
   - Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?
-confidence: 0.92
+confidence: 0.9
 status: active
-updatedAt: 2026-05-01T00:00:00Z
+updatedAt: 2026-05-04T00:01:50Z
 ---
 
-# Nightly memory reconcile 2026-05-01
+# Nightly memory reconcile 2026-05-04
 
 ## Notes
 <!-- openclaw:human:start -->
@@ -26,15 +25,16 @@ updatedAt: 2026-05-01T00:00:00Z
 
 ## Summary
 <!-- openclaw:wiki:generated:start -->
-Nightly reconcile reviewed recent daily memory notes, dream recall artifacts, current structured-memory records, and current wiki state.
+Nightly reconcile reviewed current daily memory notes, dream recall artifacts, structured-memory state, and wiki maintenance outputs.
 
 Findings:
-- No new daily memory note appeared after 2026-04-22, so the newest substantive episodic evidence remains the coding-memory recall gap identified on 2026-04-22.
-- Dream recall artifacts still point back to the same April 17 to April 22 memory spans and do not justify new durable user-facing facts on their own.
-- Added one verified structured-memory fact claim that as of 2026-05-01, wiki_status still reports memory-wiki bridge mode enabled with zero exported public memory artifacts.
-- Added one candidate structured reflection for the repeated bridge-export gap on 2026-05-01.
-- Wiki lint remains warning-only, centered on the standing bridge-export open question across nightly syntheses.
-- No contradictions or provenance gaps were found in the reviewed evidence.
+- No daily memory note newer than 2026-04-22 is present, so fresh episodic evidence remains stalled.
+- Dream recall artifacts still point back to late-April memory spans and do not justify new durable user-facing facts on their own.
+- Added one verified structured-memory fact claim that as of 2026-05-04, wiki_status still reports memory-wiki bridge mode enabled with zero exported public memory artifacts.
+- Added one candidate structured reflection noting that the nightly reconcile is still running without newer daily-note evidence.
+- `openclaw wiki bridge import` synced 0 artifacts again, so the bridge export gap remains unresolved.
+- Wiki lint remains warning-only and now includes the standing open question on this 2026-05-04 synthesis as well.
+- No contradictions or provenance failures were surfaced during this pass.
 
 Operational stance:
 - Keep treating daily memory files, explicit wiki pages, and evidence-backed structured-memory records as the primary canon for operational memory.
@@ -56,7 +56,7 @@ Operational stance:
 - [[syntheses/nightly-memory-reconcile-2026-04-26|Nightly memory reconcile 2026-04-26]]
 - [[syntheses/nightly-memory-reconcile-2026-04-29|Nightly memory reconcile 2026-04-29]]
 - [[syntheses/nightly-memory-reconcile-2026-04-30|Nightly memory reconcile 2026-04-30]]
+- [[syntheses/nightly-memory-reconcile-2026-05-01|Nightly memory reconcile 2026-05-01]]
 - [[syntheses/nightly-memory-reconcile-2026-05-02|Nightly memory reconcile 2026-05-02]]
 - [[syntheses/nightly-memory-reconcile-2026-05-03|Nightly memory reconcile 2026-05-03]]
-- [[syntheses/nightly-memory-reconcile-2026-05-04|Nightly memory reconcile 2026-05-04]]
 <!-- openclaw:wiki:related:end -->
