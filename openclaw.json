@@ -22,7 +22,7 @@
       "model": {
         "primary": "openai-codex/gpt-5.4",
         "fallbacks": [
-          "local-qwen/qwen3.6"
+          "local-qwen/Qwen3.6-35B-A3B-GGUF-Q4_K_M"
         ]
       },
       "memorySearch": {
@@ -49,8 +49,8 @@
         "baseUrl": "http://100.125.183.33:8002/v1",
         "models": [
           {
-            "id": "qwen3.6",
-            "name": "Qwen 3.6 Local",
+            "id": "Qwen3.6-35B-A3B-GGUF-Q4_K_M",
+            "name": "Qwen 3.6 35B Local",
             "reasoning": false,
             "input": [
               "text"
