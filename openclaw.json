@@ -22,7 +22,7 @@
       "model": {
         "primary": "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M",
         "fallbacks": [
-          "openai-codex/gpt-5.4"
+          ""
         ]
       },
       "memorySearch": {
@@ -40,27 +40,6 @@
   "models": {
     "mode": "merge",
     "providers": {
-      "local-qwen": {
-        "baseUrl": "http://100.125.183.33:8002/v1",
-        "models": [
-          {
-            "id": "Qwen3.6-35B-A3B-GGUF-Q4_K_M",
-            "name": "Qwen 3.6 35B Local",
-            "reasoning": false,
-            "input": [
-              "text"
-            ],
-            "cost": {
-              "input": 0,
-              "output": 0,
-              "cacheRead": 0,
-              "cacheWrite": 0
-            },
-            "contextWindow": 200000,
-            "maxTokens": 8192
-          }
-        ]
-      },
       "vllm": {
         "baseUrl": "http://100.125.183.33:8002/v1",
         "api": "openai-completions",
