@@ -20,10 +20,10 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit",
+        "primary": "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M",
         "fallbacks": [
           "openai-codex/gpt-5.4",
-          "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M"
+          "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit"
         ]
       },
       "memorySearch": {
@@ -61,6 +61,29 @@
               "cacheWrite": 0
             },
             "contextWindow": 128000,
+            "maxTokens": 8192
+          }
+        ]
+      },
+      "llamacpp": {
+        "baseUrl": "http://100.125.183.33:8002/v1",
+        "api": "openai-completions",
+        "apiKey": "VLLM_API_KEY",
+        "models": [
+          {
+            "id": "Qwen3.6-35B-A3B-GGUF-Q4_K_M",
+            "name": "Qwen3.6-35B-A3B-GGUF-Q4_K_M",
+            "reasoning": false,
+            "input": [
+              "text"
+            ],
+            "cost": {
+              "input": 0,
+              "output": 0,
+              "cacheRead": 0,
+              "cacheWrite": 0
+            },
+            "contextWindow": 262144,
             "maxTokens": 8192
           }
         ]
