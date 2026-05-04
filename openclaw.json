@@ -20,9 +20,10 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "openai-codex/gpt-5.4",
+        "primary": "Qwen3.6-35B-A3B-GGUF-Q4_K_M",
         "fallbacks": [
-          "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit"
+          "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit",
+	  "openai-codex/gpt-5.4"
         ]
       },
       "memorySearch": {
