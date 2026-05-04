@@ -35,15 +35,6 @@
   "models": {
     "mode": "merge",
     "providers": {
-      "openai-codex": {
-        "baseUrl": "https://api.openai.com/v1",
-        "models": [
-          {
-            "id": "gpt-5.4",
-            "name": "GPT-5.4"
-          }
-        ]
-      },
       "local-qwen": {
         "baseUrl": "http://100.125.183.33:8002/v1",
         "models": [
