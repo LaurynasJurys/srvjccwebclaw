@@ -36,6 +36,9 @@
         "llamacpp/Qwen3.6-35B-A3B-GGUF-Q4_K_M": {},
         "openai-codex/gpt-5.4": {},
         "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit": {}
+      },
+      "subagents": {
+        "model": "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit"
       }
     }
   },
@@ -102,7 +105,7 @@
   },
   "meta": {
     "lastTouchedVersion": "2026.4.15",
-    "lastTouchedAt": "2026-05-04T18:57:13.068Z"
+    "lastTouchedAt": "2026-05-04T19:11:11.911Z"
   },
   "plugins": {
     "entries": {
