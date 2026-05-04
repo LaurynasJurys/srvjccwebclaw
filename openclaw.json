@@ -20,7 +20,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M",
+        "primary": "openai-codex/gpt-5.4",
         "fallbacks": [
           "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit"
         ]
@@ -32,8 +32,7 @@
         "every": "0m"
       },
       "models": {
-        "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit": {},
-        "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M": {}
+        "openai-codex/gpt-5.4": {}
       }
     }
   },
@@ -98,7 +97,7 @@
   },
   "meta": {
     "lastTouchedVersion": "2026.4.15",
-    "lastTouchedAt": "2026-05-04T13:49:15.374Z"
+    "lastTouchedAt": "2026-05-04T13:54:08.650Z"
   },
   "plugins": {
     "entries": {
@@ -216,7 +215,7 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-05-04T13:49:15.064Z",
+    "lastRunAt": "2026-05-04T13:54:08.464Z",
     "lastRunVersion": "2026.4.15",
     "lastRunCommand": "configure",
     "lastRunMode": "local"
@@ -226,6 +225,11 @@
       "vllm:default": {
         "provider": "vllm",
         "mode": "api_key"
+      },
+      "openai-codex:laurynasjurys@gmail.com": {
+        "provider": "openai-codex",
+        "mode": "oauth",
+        "email": "laurynasjurys@gmail.com"
       }
     }
   }
