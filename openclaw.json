@@ -20,10 +20,9 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "Qwen3.6-35B-A3B-GGUF-Q4_K_M",
+        "primary": "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M",
         "fallbacks": [
-          "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit",
-	  "openai-codex/gpt-5.4"
+          "openai-codex/gpt-5.4"
         ]
       },
       "memorySearch": {
@@ -33,7 +32,8 @@
         "every": "0m"
       },
       "models": {
-        "openai-codex/gpt-5.4": {}
+        "openai-codex/gpt-5.4": {},
+        "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M": {}
       }
     }
   },
@@ -98,7 +98,7 @@
   },
   "meta": {
     "lastTouchedVersion": "2026.4.15",
-    "lastTouchedAt": "2026-05-04T13:54:08.650Z"
+    "lastTouchedAt": "2026-05-04T14:00:32.150Z"
   },
   "plugins": {
     "entries": {
@@ -216,7 +216,7 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-05-04T13:54:08.464Z",
+    "lastRunAt": "2026-05-04T14:00:31.977Z",
     "lastRunVersion": "2026.4.15",
     "lastRunCommand": "configure",
     "lastRunMode": "local"
