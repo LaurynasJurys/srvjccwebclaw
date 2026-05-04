@@ -95,7 +95,7 @@
   },
   "meta": {
     "lastTouchedVersion": "2026.4.15",
-    "lastTouchedAt": "2026-05-04T13:46:54.900Z"
+    "lastTouchedAt": "2026-05-04T13:47:10.911Z"
   },
   "plugins": {
     "entries": {
@@ -175,6 +175,9 @@
       },
       "discord": {
         "config": {}
+      },
+      "vllm": {
+        "enabled": true
       }
     }
   },
