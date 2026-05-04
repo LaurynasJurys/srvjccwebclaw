@@ -20,7 +20,7 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M",
+        "primary": "llamaccp/Qwen3.6-35B-A3B-GGUF-Q4_K_M",
         "fallbacks": [
           "openai-codex/gpt-5.4",
           "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit"
