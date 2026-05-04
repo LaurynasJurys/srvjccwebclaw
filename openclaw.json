@@ -20,9 +20,10 @@
   "agents": {
     "defaults": {
       "model": {
-        "primary": "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M",
+        "primary": "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit",
         "fallbacks": [
-          ""
+          "openai-codex/gpt-5.4",
+          "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M"
         ]
       },
       "memorySearch": {
@@ -33,7 +34,8 @@
       },
       "models": {
         "openai-codex/gpt-5.4": {},
-        "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M": {}
+        "vllm/Qwen3.6-35B-A3B-GGUF-Q4_K_M": {},
+        "vllm/cyankiwi/gemma-4-31B-it-AWQ-4bit": {}
       }
     }
   },
@@ -41,13 +43,13 @@
     "mode": "merge",
     "providers": {
       "vllm": {
-        "baseUrl": "http://100.125.183.33:8002/v1",
+        "baseUrl": "http://100.125.183.33:8001/v1",
         "api": "openai-completions",
         "apiKey": "VLLM_API_KEY",
         "models": [
           {
-            "id": "Qwen3.6-35B-A3B-GGUF-Q4_K_M",
-            "name": "Qwen3.6-35B-A3B-GGUF-Q4_K_M",
+            "id": "cyankiwi/gemma-4-31B-it-AWQ-4bit",
+            "name": "cyankiwi/gemma-4-31B-it-AWQ-4bit",
             "reasoning": false,
             "input": [
               "text"
@@ -77,7 +79,7 @@
   },
   "meta": {
     "lastTouchedVersion": "2026.4.15",
-    "lastTouchedAt": "2026-05-04T14:00:32.150Z"
+    "lastTouchedAt": "2026-05-04T14:12:20.998Z"
   },
   "plugins": {
     "entries": {
@@ -195,7 +197,7 @@
     }
   },
   "wizard": {
-    "lastRunAt": "2026-05-04T14:00:31.977Z",
+    "lastRunAt": "2026-05-04T14:12:20.857Z",
     "lastRunVersion": "2026.4.15",
     "lastRunCommand": "configure",
     "lastRunMode": "local"
