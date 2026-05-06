@@ -3,14 +3,14 @@ pageType: report
 id: report.open-questions
 title: Open Questions
 status: active
-updatedAt: 2026-05-05T00:02:13.499Z
+updatedAt: 2026-05-06T00:02:18.292Z
 ---
 
 # Open Questions
 
 ## Generated
 <!-- openclaw:wiki:open-questions:start -->
-- Pages with open questions: 14
+- Pages with open questions: 15
 
 - [[syntheses/nightly-memory-reconcile-2026-04-20|Nightly memory reconcile 2026-04-20]]: Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?
 - [[syntheses/nightly-memory-reconcile-2026-04-21|Nightly memory reconcile 2026-04-21]]: Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?
@@ -26,4 +26,5 @@ updatedAt: 2026-05-05T00:02:13.499Z
 - [[syntheses/nightly-memory-reconcile-2026-05-03|Nightly memory reconcile 2026-05-03]]: Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?
 - [[syntheses/nightly-memory-reconcile-2026-05-04|Nightly memory reconcile 2026-05-04]]: Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?
 - [[syntheses/nightly-memory-reconcile-2026-05-05|Nightly memory reconcile 2026-05-05]]: Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?
+- [[syntheses/nightly-memory-reconcile-2026-05-06|Nightly memory reconcile 2026-05-06]]: Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?
 <!-- openclaw:wiki:open-questions:end -->
