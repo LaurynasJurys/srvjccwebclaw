@@ -10,7 +10,7 @@ status: active
 ## Generated
 <!-- openclaw:wiki:lint:start -->
 - Errors: 0
-- Warnings: 15
+- Warnings: 16
 
 ### Warnings
 - `syntheses/nightly-memory-reconcile-2026-04-20.md`: Page lists 1 open question.
@@ -28,6 +28,7 @@ status: active
 - `syntheses/nightly-memory-reconcile-2026-05-04.md`: Page lists 1 open question.
 - `syntheses/nightly-memory-reconcile-2026-05-05.md`: Page lists 1 open question.
 - `syntheses/nightly-memory-reconcile-2026-05-06.md`: Page lists 1 open question.
+- `syntheses/nightly-memory-reconcile-2026-05-07.md`: Page lists 1 open question.
 
 ### Open Questions
 - `syntheses/nightly-memory-reconcile-2026-04-20.md`: Page lists 1 open question.
@@ -45,4 +46,5 @@ status: active
 - `syntheses/nightly-memory-reconcile-2026-05-04.md`: Page lists 1 open question.
 - `syntheses/nightly-memory-reconcile-2026-05-05.md`: Page lists 1 open question.
 - `syntheses/nightly-memory-reconcile-2026-05-06.md`: Page lists 1 open question.
+- `syntheses/nightly-memory-reconcile-2026-05-07.md`: Page lists 1 open question.
 <!-- openclaw:wiki:lint:end -->
