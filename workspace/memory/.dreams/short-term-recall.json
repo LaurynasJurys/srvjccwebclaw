@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "updatedAt": "2026-05-07T00:00:32.847Z",
+  "updatedAt": "2026-05-09T00:00:40.131Z",
   "entries": {
     "memory:memory/2026-04-17.md:1:22": {
       "key": "memory:memory/2026-04-17.md:1:22",
@@ -9,13 +9,13 @@
       "endLine": 22,
       "source": "memory",
       "snippet": "# 2026-04-17 - Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup deferred for later. # 2026-04-17 - Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup defe",
-      "recallCount": 15,
+      "recallCount": 16,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 11.816113311366758,
+      "totalScore": 12.627854205127857,
       "maxScore": 0.8117409234497943,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-05-07T00:00:32.847Z",
+      "lastRecalledAt": "2026-05-09T00:00:40.131Z",
       "queryHashes": [
         "5399429133d3",
         "4690d25a1281",
@@ -31,7 +31,8 @@
         "4e9137356949",
         "b04ba6a7f3d7",
         "e89c2f57c633",
-        "e40b745a9131"
+        "e40b745a9131",
+        "1f26a15f486f"
       ],
       "recallDays": [
         "2026-04-18",
@@ -42,7 +43,8 @@
         "2026-04-23",
         "2026-04-24",
         "2026-04-25",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-09"
       ],
       "conceptTags": [
         "gateway",
@@ -62,13 +64,13 @@
       "endLine": 47,
       "source": "memory",
       "snippet": "- Created initial long-term memory file (`MEMORY.md`). - Disabled heartbeat for now. - OpenClaw web UI is exposed via Tailscale. - Fixed credentials directory permissions. - Moved gateway password secret into `.env` and config now references `OPENCLAW_GATEWAY_PASSWORD`. - Memory search enabled, but semantic provider setup deferred for later. - Hardened SSH by confirming `PasswordAuthentication no` and changing `PermitRootLogin` to `no`. - Bootstrapped k3s + Argo CD on the host, fixed Argo repo credential/bootstrap issues, and verified ingress/TLS for staging, Keycloak, and Wiki.js. - Chose manual-first Keycloak bootstrap going forward and removed bootstrap admin credentials from both repo ma",
-      "recallCount": 15,
+      "recallCount": 16,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 11.81327855171167,
+      "totalScore": 12.624830449786437,
       "maxScore": 0.8115519377328928,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-05-07T00:00:32.847Z",
+      "lastRecalledAt": "2026-05-09T00:00:40.131Z",
       "queryHashes": [
         "5399429133d3",
         "4690d25a1281",
@@ -84,7 +86,8 @@
         "4e9137356949",
         "b04ba6a7f3d7",
         "e89c2f57c633",
-        "e40b745a9131"
+        "e40b745a9131",
+        "1f26a15f486f"
       ],
       "recallDays": [
         "2026-04-18",
@@ -95,7 +98,8 @@
         "2026-04-23",
         "2026-04-24",
         "2026-04-25",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-09"
       ],
       "conceptTags": [
         "gateway",
@@ -115,13 +119,13 @@
       "endLine": 40,
       "source": "memory",
       "snippet": "- Set up SOPS + age for GitOps secrets, including Argo-side decryption support, and moved Keycloak/Wiki.js Kubernetes secrets to encrypted GitOps-managed config. - Deployed Vault on the host outside k3s, bound privately on loopback + Tailscale only, initialized/unsealed it, and enabled KV v2. - Established Vault AppRole-based automation access and granted scoped read access to the Keycloak secret path. - Created Keycloak realm `jcc` and configured a `WikiApp` OIDC client; realm hardening enabled email verification, reset password, brute-force protection, disabled registration, and disabled direct access grants for the Wiki client. - Began replacing staging.jurys.lt Traefik basic-auth with Ke",
-      "recallCount": 15,
+      "recallCount": 16,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 11.860189418748678,
+      "totalScore": 12.67170631806471,
       "maxScore": 0.8589529377282507,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-05-07T00:00:32.847Z",
+      "lastRecalledAt": "2026-05-09T00:00:40.131Z",
       "queryHashes": [
         "5399429133d3",
         "4690d25a1281",
@@ -137,7 +141,8 @@
         "b04ba6a7f3d7",
         "e89c2f57c633",
         "89c8c62f5b7e",
-        "e40b745a9131"
+        "e40b745a9131",
+        "1f26a15f486f"
       ],
       "recallDays": [
         "2026-04-18",
@@ -149,7 +154,8 @@
         "2026-04-24",
         "2026-04-25",
         "2026-04-26",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-09"
       ],
       "conceptTags": [
         "argo-side",
@@ -169,13 +175,13 @@
       "endLine": 58,
       "source": "memory",
       "snippet": "- Pushed repo fixes for staging auth under commits `8fbff8d`, `5b56831`, `6b4cc25`, `f4948fa`, and `74dd0a4`. - Wiki.js local admin credentials in Vault path `secret/Wiki.local` were corrected and used successfully to create initial infra/runbook pages in Wiki.js. - Created Wiki.js pages: `infra/openclaw`, `infra/k3s-argocd`, `infra/vault`, `infra/keycloak`, `infra/wikijs`, and `runbooks/staging-auth`. - Wiki.js native Keycloak auth strategy initially failed with UI error `Invalid authentication provider`; root cause was that the strategy row existed but persisted config fields were all null, causing startup error `host is required`. - Keycloak provider config was repaired directly in Wiki.",
-      "recallCount": 11,
+      "recallCount": 12,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 7.908760849808553,
+      "totalScore": 8.540762772595903,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-05-07T00:00:32.847Z",
+      "lastRecalledAt": "2026-05-09T00:00:40.131Z",
       "queryHashes": [
         "5399429133d3",
         "128925e60108",
@@ -187,7 +193,8 @@
         "b53bb6929d80",
         "4e9137356949",
         "89c8c62f5b7e",
-        "e40b745a9131"
+        "e40b745a9131",
+        "1f26a15f486f"
       ],
       "recallDays": [
         "2026-04-18",
@@ -197,7 +204,8 @@
         "2026-04-22",
         "2026-04-23",
         "2026-04-26",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-09"
       ],
       "conceptTags": [
         "wiki.js",
@@ -217,13 +225,13 @@
       "endLine": 54,
       "source": "memory",
       "snippet": "- Established Vault AppRole-based automation access and granted scoped read access to the Keycloak secret path. - Created Keycloak realm `jcc` and configured a `WikiApp` OIDC client; realm hardening enabled email verification, reset password, brute-force protection, disabled registration, and disabled direct access grants for the Wiki client. - Began replacing staging.jurys.lt Traefik basic-auth with Keycloak-backed oauth2-proxy via GitOps; repo commit `d57fef9` exists but rollout was not yet fully completed or verified because the Keycloak client secret needed one cleanup/fix. - Finished staging Keycloak auth rollout: `juryslt-stage` reached `Synced|Healthy|Succeeded`, `juryslt-oauth2-proxy",
-      "recallCount": 9,
+      "recallCount": 10,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 5.911918594115295,
+      "totalScore": 6.543318887177767,
       "maxScore": 0.8607164011885884,
       "firstRecalledAt": "2026-04-18T12:23:12.299Z",
-      "lastRecalledAt": "2026-05-07T00:00:32.847Z",
+      "lastRecalledAt": "2026-05-09T00:00:40.131Z",
       "queryHashes": [
         "5399429133d3",
         "128925e60108",
@@ -233,7 +241,8 @@
         "b53bb6929d80",
         "4e9137356949",
         "89c8c62f5b7e",
-        "e40b745a9131"
+        "e40b745a9131",
+        "1f26a15f486f"
       ],
       "recallDays": [
         "2026-04-18",
@@ -243,7 +252,8 @@
         "2026-04-22",
         "2026-04-23",
         "2026-04-26",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-09"
       ],
       "conceptTags": [
         "approle-based",
@@ -263,13 +273,13 @@
       "endLine": 7,
       "source": "memory",
       "snippet": "- Implemented an OpenClaw portability bundle in `workspace/openclaw-portable/` with `openclaw.template.json`, `openclaw.env.example`, `bootstrap-openclaw.sh`, and `README.md` to make redeploy on another host more reproducible. - Enabled OpenClaw `memory-core` dreaming nightly at 03:00 Europe/Vilnius with light, REM, and deep phases. - Enabled `memory-wiki` in bridge mode with auto compile, daily note indexing, memory root indexing, dream report indexing, and shared search across corpus `all`. - Added nightly 03:00 Europe/Vilnius memory/wiki maintenance to lint and reconcile memory and wiki. - Clarified to Laurynas that memory layer 3 is currently implemented as hybrid durable operational me",
-      "recallCount": 15,
+      "recallCount": 16,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 15,
+      "totalScore": 16,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-18T12:25:12.237Z",
-      "lastRecalledAt": "2026-05-07T00:00:32.847Z",
+      "lastRecalledAt": "2026-05-09T00:00:40.131Z",
       "queryHashes": [
         "4690d25a1281",
         "ee7c28dfa3c9",
@@ -285,7 +295,8 @@
         "4e9137356949",
         "b04ba6a7f3d7",
         "e89c2f57c633",
-        "e40b745a9131"
+        "e40b745a9131",
+        "1f26a15f486f"
       ],
       "recallDays": [
         "2026-04-18",
@@ -296,7 +307,8 @@
         "2026-04-23",
         "2026-04-24",
         "2026-04-25",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-09"
       ],
       "conceptTags": [
         "workspace/openclaw-portable",
@@ -353,24 +365,26 @@
       "endLine": 7,
       "source": "memory",
       "snippet": "# 2026-04-22 - Reviewed Microsoft auto-memory article against current OpenClaw memory setup. - Identified that current memory architecture is broader than auto-memory, but coding-session recall is not yet first-class. - Main practical gaps: no automatic coding-task recall preflight, weak project/task episodic summaries, and under-populated wiki artifacts despite bridge mode being enabled. - Recommended implementation direction: add coding recall preflight, structured project/task summaries, and project-oriented wiki pages fed by nightly synthesis.",
-      "recallCount": 4,
+      "recallCount": 5,
       "dailyCount": 0,
       "groundedCount": 0,
-      "totalScore": 4,
+      "totalScore": 5,
       "maxScore": 1,
       "firstRecalledAt": "2026-04-23T00:00:30.398Z",
-      "lastRecalledAt": "2026-05-07T00:00:32.847Z",
+      "lastRecalledAt": "2026-05-09T00:00:40.131Z",
       "queryHashes": [
         "4e9137356949",
         "b04ba6a7f3d7",
         "e89c2f57c633",
-        "e40b745a9131"
+        "e40b745a9131",
+        "1f26a15f486f"
       ],
       "recallDays": [
         "2026-04-23",
         "2026-04-24",
         "2026-04-25",
-        "2026-05-07"
+        "2026-05-07",
+        "2026-05-09"
       ],
       "conceptTags": [
         "auto-memory",
