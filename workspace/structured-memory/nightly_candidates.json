@@ -1,9 +1,9 @@
 {
-  "generatedAt": "2026-05-09T00:01:39Z",
+  "generatedAt": "2026-05-10T00:00:00Z",
   "fact_claims": [
     {
-      "id": "fact.bridge-mode-zero-exported-artifacts-2026-05-09",
-      "claim": "As of 2026-05-09, wiki_status reports memory-wiki bridge mode enabled with zero exported public memory artifacts.",
+      "id": "fact.bridge-mode-zero-exported-artifacts-2026-05-10",
+      "claim": "As of 2026-05-10, wiki_status reports memory-wiki bridge mode enabled with zero exported public memory artifacts.",
       "domain": "memory-wiki",
       "subject_refs": [
         "memory-wiki",
@@ -13,12 +13,12 @@
       "confidence": 0.94,
       "validation_state": "verified",
       "owner": "automation.nightly-reconcile",
-      "last_reviewed_at": "2026-05-09T00:01:39Z",
+      "last_reviewed_at": "2026-05-10T00:00:00Z",
       "evidence_refs": [
         {
           "source_kind": "wiki_status",
           "source_path": "wiki-vault",
-          "source_locator": "status:2026-05-09",
+          "source_locator": "status:2026-05-10",
           "note": "Bridge mode enabled, zero exported artifacts, bridge warning present.",
           "weight": 1.0
         },
@@ -31,9 +31,9 @@
         },
         {
           "source_kind": "wiki",
-          "source_path": "wiki-vault/syntheses/nightly-memory-reconcile-2026-05-08.md",
+          "source_path": "wiki-vault/syntheses/nightly-memory-reconcile-2026-05-09.md",
           "source_locator": "summary",
-          "note": "Previous nightly synthesis recorded the same unresolved bridge export gap on 2026-05-08.",
+          "note": "Previous nightly synthesis recorded the same unresolved bridge export gap on 2026-05-09.",
           "weight": 0.8
         }
       ]
@@ -41,8 +41,8 @@
   ],
   "reflections": [
     {
-      "id": "reflection.latest-workspace-memory-artifact-remains-session-summary-2026-05-09",
-      "observation": "As of 2026-05-09, the newest workspace memory markdown artifact is still memory/2026-05-04-1423.md, a short session summary rather than a richer daily note.",
+      "id": "reflection.latest-workspace-memory-artifact-remains-session-summary-2026-05-10",
+      "observation": "As of 2026-05-10, the newest workspace memory markdown artifact is still memory/2026-05-04-1423.md, a short session summary rather than a richer daily note.",
       "pattern": "Fresh episodic evidence in the workspace is limited and skewed toward thin session summaries instead of newer daily notes.",
       "recommended_action": "Keep nightly automation conservative and avoid promoting additional durable operational memory until fresher evidence appears.",
       "related_refs": [
@@ -52,7 +52,7 @@
       "confidence": 0.84,
       "promotion_state": "candidate",
       "owner": "automation.nightly-reconcile",
-      "last_reviewed_at": "2026-05-09T00:01:39Z",
+      "last_reviewed_at": "2026-05-10T00:00:00Z",
       "evidence_refs": [
         {
           "source_kind": "memory",
@@ -65,7 +65,7 @@
           "source_kind": "dream",
           "source_path": "memory/.dreams/short-term-recall.json",
           "source_locator": "updatedAt",
-          "note": "Short-term recall artifact updated at 2026-05-09T00:00:40.131Z still points mostly to older April sources.",
+          "note": "Short-term recall artifact updated on 2026-05-09 still points mostly to older April sources.",
           "weight": 0.7
         }
       ]
