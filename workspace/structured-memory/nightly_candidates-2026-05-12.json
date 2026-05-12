@@ -1,0 +1,85 @@
+{
+  "fact_claims": [
+    {
+      "id": "fact.bridge-mode-zero-exported-artifacts-2026-05-12",
+      "claim": "As of 2026-05-12 nightly maintenance, memory-wiki bridge mode is enabled but still reports zero exported public memory artifacts.",
+      "domain": "memory-wiki",
+      "subject_refs_json": [
+        "memory-wiki",
+        "bridge-mode",
+        "wiki-status"
+      ],
+      "confidence": 0.96,
+      "validation_state": "verified",
+      "owner": "automation.nightly-reconcile",
+      "created_at": "2026-05-12T00:00:00Z",
+      "updated_at": "2026-05-12T00:00:00Z",
+      "last_reviewed_at": "2026-05-12T00:00:00Z",
+      "evidence_refs": [
+        {
+          "source_kind": "wiki-status",
+          "source_path": "wiki-vault",
+          "source_locator": "bridge enabled, 0 exported artifacts",
+          "note": "Current wiki_status output still reports bridge mode enabled with zero exported public memory artifacts.",
+          "weight": 1.0
+        },
+        {
+          "source_kind": "wiki",
+          "source_path": "wiki-vault/syntheses/nightly-memory-reconcile-2026-05-11.md",
+          "source_locator": "summary",
+          "note": "Previous nightly synthesis recorded the same unresolved bridge export gap on 2026-05-11.",
+          "weight": 0.8
+        },
+        {
+          "source_kind": "memory",
+          "source_path": "memory/2026-04-18.md",
+          "source_locator": "lines 1-5",
+          "note": "Bridge mode and nightly maintenance were enabled on 2026-04-18.",
+          "weight": 0.7
+        }
+      ]
+    }
+  ],
+  "reflections": [
+    {
+      "id": "reflection.evidence-freshness-still-limited-2026-05-12",
+      "observation": "Workspace episodic evidence freshness is still limited: the newest memory markdown artifact remains the short 2026-05-04 session summary, while dream recall outputs still mostly point to older April sources.",
+      "pattern": "Nightly reconcile has richer maintenance traces than fresh human-authored daily memory input, which limits justified promotion of new durable operational knowledge.",
+      "recommended_action": "Keep nightly ingestion conservative and avoid promoting additional durable wiki-backed operational memory until fresher daily notes or bridge exports appear.",
+      "related_refs_json": [
+        "memory/2026-05-04-1423.md",
+        "memory/.dreams/short-term-recall.json",
+        "wiki-vault/syntheses/nightly-memory-reconcile-2026-05-11.md"
+      ],
+      "confidence": 0.87,
+      "promotion_state": "candidate",
+      "owner": "automation.nightly-reconcile",
+      "created_at": "2026-05-12T00:00:00Z",
+      "updated_at": "2026-05-12T00:00:00Z",
+      "last_reviewed_at": "2026-05-12T00:00:00Z",
+      "evidence_refs": [
+        {
+          "source_kind": "memory",
+          "source_path": "memory/2026-05-04-1423.md",
+          "source_locator": "file",
+          "note": "Newest memory markdown artifact is still a short session transcript summary.",
+          "weight": 1.0
+        },
+        {
+          "source_kind": "dream",
+          "source_path": "memory/.dreams/short-term-recall.json",
+          "source_locator": "updatedAt:2026-05-11T00:00:39.226Z",
+          "note": "Recall artifact refreshed recently still points mostly to older April sources.",
+          "weight": 0.7
+        },
+        {
+          "source_kind": "wiki",
+          "source_path": "wiki-vault/syntheses/nightly-memory-reconcile-2026-05-11.md",
+          "source_locator": "summary",
+          "note": "Previous nightly synthesis already noted limited evidence freshness.",
+          "weight": 0.8
+        }
+      ]
+    }
+  ]
+}

@@ -6,6 +6,7 @@ status: active
 
 # Syntheses
 
+- [[syntheses/nightly-memory-reconcile-2026-05-12|Nightly memory reconcile 2026 05 12]]
 - [[syntheses/nightly-memory-reconcile-2026-05-01|Nightly memory reconcile 2026 05 01]]
 - [[syntheses/nightly-memory-reconcile-2026-04-30|Nightly memory reconcile 2026 04 30]]
 - [[syntheses/nightly-memory-reconcile-2026-04-29|Nightly memory reconcile 2026 04 29]]
@@ -38,4 +39,6 @@ status: active
 - [[syntheses/nightly-memory-reconcile-2026-05-08|Nightly memory reconcile 2026-05-08]]
 - [[syntheses/nightly-memory-reconcile-2026-05-09|Nightly memory reconcile 2026-05-09]]
 - [[syntheses/nightly-memory-reconcile-2026-05-10|Nightly memory reconcile 2026-05-10]]
+- [[syntheses/nightly-memory-reconcile-2026-05-11|Nightly memory reconcile 2026-05-11]]
+- [[syntheses/nightly-memory-reconcile-2026-05-12|Nightly memory reconcile 2026-05-12]]
 <!-- openclaw:wiki:syntheses:index:end -->

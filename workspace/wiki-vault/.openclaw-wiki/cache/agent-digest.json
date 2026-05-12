@@ -3,7 +3,7 @@
     "entity": 0,
     "concept": 1,
     "source": 0,
-    "synthesis": 19,
+    "synthesis": 20,
     "report": 6
   },
   "claimCount": 0,
@@ -98,7 +98,7 @@
       "questions": [],
       "contradictions": [],
       "freshnessLevel": "fresh",
-      "lastTouchedAt": "2026-05-10T00:02:36.326Z",
+      "lastTouchedAt": "2026-05-12T00:01:42.904Z",
       "claimCount": 0,
       "topClaims": []
     },
@@ -572,6 +572,32 @@
       "confidence": 0.9,
       "freshnessLevel": "fresh",
       "lastTouchedAt": "2026-05-10T00:00:00Z",
+      "claimCount": 0,
+      "topClaims": []
+    },
+    {
+      "id": "synthesis.nightly-memory-reconcile-2026-05-11",
+      "title": "Nightly memory reconcile 2026-05-11",
+      "kind": "synthesis",
+      "path": "syntheses/nightly-memory-reconcile-2026-05-11.md",
+      "sourceIds": [
+        "memory/2026-04-18.md",
+        "memory/2026-04-22.md",
+        "memory/2026-05-04-1423.md",
+        "memory/.dreams/short-term-recall.json",
+        "memory/.dreams/events.jsonl",
+        "wiki-vault/syntheses/nightly-memory-reconcile-2026-05-10.md",
+        "wiki-vault/reports/lint.md",
+        "structured-memory/memory.db",
+        "structured-memory/nightly_candidates-2026-05-11.json"
+      ],
+      "questions": [
+        "Why is memory-wiki bridge mode still reporting zero exported artifacts despite bridge indexing being enabled?"
+      ],
+      "contradictions": [],
+      "confidence": 0.9,
+      "freshnessLevel": "fresh",
+      "lastTouchedAt": "2026-05-11T00:00:00Z",
       "claimCount": 0,
       "topClaims": []
     }
